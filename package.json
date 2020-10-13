@@ -8,6 +8,11 @@
     "babel-loader": "^8.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.0.0"
   },
@@ -18,10 +23,15 @@
     "lib": "lib",
     "test": "test"
   },
+  "engines": {
+    "node": "v10.13.0",
+    "npm": "6.4.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --mode=development --watch"
+    "webpack": "webpack --mode=development --watch",
+    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",
