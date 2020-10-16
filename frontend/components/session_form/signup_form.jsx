@@ -36,19 +36,20 @@ class SignupForm extends React.Component {
 
   render() {
     return (
+      <div>
+      <div className="close-x" onClick={this.props.closeModal}>x</div>
+
       <div className="session-container">
         <form onSubmit={this.handleSubmit} className="session-form-box">
 
-          <div className="close-x" onClick={this.props.closeModal}>X</div>
-          <h1 className="top-message">{this.props.messageType1}</h1>
-          <h1 className="top-message">{this.props.messageType2}</h1>
 
 
-          <div className="top">
-            <h2 className="login-message">{this.props.formType}</h2>
+          <div className="top-signup">
+              <h1 className="top-message1">Create your account</h1>
+              <h1 className="top-message2">Registration is easy.</h1>
           </div>
 
-            <div className="login-form">
+            <div className="session-form">
                 <br />
               <label className="input-label">Email address
                 <br />
@@ -69,6 +70,7 @@ class SignupForm extends React.Component {
           </div>
         <h2>{this.renderErrors()}</h2>
         </form>
+      </div>
       </div>
     );
   }

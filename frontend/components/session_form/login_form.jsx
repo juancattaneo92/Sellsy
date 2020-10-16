@@ -42,12 +42,12 @@ class LoginForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="session-form-box">
     
           
-          <div className="top">
+          <div className="top-login">
           <h2 className="login-message">{this.props.formType}</h2> 
             <h2 className="button-top">{this.props.otherForm}</h2>
           </div>
 
-          <div className="login-form">
+          <div className="session-form">
             <br />
             <label className="input-label">Email address
                 <br />
