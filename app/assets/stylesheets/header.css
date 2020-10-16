@@ -1,0 +1,12 @@
+.logo{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 80;
+  color: rgb(226, 115, 25);
+  text-decoration: none;
+}
+.header-link:visited{
+  text-decoration: none;
+}
+.header-link{
+   text-decoration: none;
+}
