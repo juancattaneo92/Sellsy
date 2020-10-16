@@ -11127,3 +11127,24 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 6.1ms)
 
 
+Started POST "/api/session" for ::1 at 2020-10-16 13:55:11 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demoGuest@sellsy.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demoGuest@sellsy.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demoGuest@sellsy.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "CPZ3YE8ERuk3K_FsKgVzDA"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "CPZ3YE8ERuk3K_FsKgVzDA"], ["updated_at", "2020-10-16 20:55:11.648866"], ["id", 8]]
+  ↳ app/models/user.rb:30
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (3.1ms)
+Completed 200 OK in 303ms (Views: 13.0ms | ActiveRecord: 7.8ms)
+
+
