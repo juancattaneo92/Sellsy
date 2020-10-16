@@ -35,14 +35,16 @@ class LoginForm extends React.Component {
 
   render() {
     return (
+      <div>
+      <div className="close-x" onClick={this.props.closeModal}>x</div>
+        
       <div className="session-container">
-        <div className="close-x" onClick={this.props.closeModal}>X</div>
         <form onSubmit={this.handleSubmit} className="session-form-box">
     
           
           <div className="top">
           <h2 className="login-message">{this.props.formType}</h2> 
-          <h2 className="button-change-session">{this.props.otherForm}</h2>
+            <h2 className="button-top">{this.props.otherForm}</h2>
           </div>
 
           <div className="login-form">
@@ -62,6 +64,7 @@ class LoginForm extends React.Component {
           <h2>{this.renderErrors()}</h2>
         </form>
       </div>
+      </div >
     );
   }
 }
