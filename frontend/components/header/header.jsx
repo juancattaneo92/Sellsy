@@ -8,24 +8,25 @@ import { Link } from 'react-router-dom';
 const Header = ({ user, logout, openModal}) => {
 
   const sessionLinks = () => (
-    <div>
-    <nav className="login-button">
-      {/* <Link to="/" className="header-link"><h1 className="logo">Sellsy</h1></Link> */}
-      <button onClick={() => openModal('login')}>Login</button>
-    </nav>
-    </div >
+    <div className="header-button">
+      <button className="header-button1" onClick={() => openModal('login')}>Sign in</button>
+    </div>
   );
   const greeting = (user, logout) => (
-    <div className="header-group">
-      {/* <Link to="/" className="header-link"><h1 className="logo">Sellsy</h1></Link> */}
-      <button className="header-button" onClick={logout}>Log Out</button>
-      <h2 className="header-name">Welcome Back, {user.f_name}!</h2>
+    <div className="parent-welcome">
+      <div className="header-button"> 
+        {/* <Link to="/" className="header-link"><h1 className="logo">Sellsy</h1></Link> */}
+        <button className="header-button1" onClick={logout}>Sign out</button>
+      </div>
+      <div className="header-welcome">
+        <h2>Welcome Back, {user.f_name}!</h2>
+        </div>
     </div>
   );
 
   return (
     <div className="header-main">
-      <Link to="/" className="header-link"><h1 className="logo">Sellsy</h1></Link>
+      <Link to="/" className="header-link"><div className="logo">Sellsy</div></Link>
         <div className="session-but">
             { user ? greeting(user, logout) : sessionLinks()}
         </div>

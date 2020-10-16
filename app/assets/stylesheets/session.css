@@ -24,7 +24,7 @@
     height: 45px;
     width: 300px;
     border-radius: 4px;
-    margin: 15px 15px 16px 26px;
+    margin: 12px 15px 12px 26px;
     border: 1.5px solid gray;
     font-size: 20px;
     padding-left: 20px;
@@ -38,7 +38,7 @@
     font-size: 20px;
     font-weight: 300;
     position: flex;
-    margin: 20px 15px 16px 25px;
+    margin: 11px 15px 16px 25px;
     align-items: center;
     padding: 15px;
 }
@@ -57,31 +57,32 @@
     cursor: pointer;
 }
 button{
-    font-size: 14px;
-    height: 35px;
+    font-size: 15px;
+    height: 38px;
     width: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
     box-sizing: border-box;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 20px;
     cursor: pointer;
     font-weight: 200;
 }
 .close-x{
-    font-size: 38px;
+    font-size: 28px;
     color: whitesmoke;
     width: 55px;
-    height: 55px;
+    height: 53px;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     cursor: pointer;
     margin: auto;
     margin-right: 0;
-    font-weight: 200;
+    font-weight: 300;
+    align-items: center;
 }
 .close-x:hover,
 .close-x:focus {
@@ -93,26 +94,29 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 30px 15px 28px;
+    margin: 0px 30px 32px 28px;
+    height: 85px;
+    
 }
 .top-signup {
     display: grid;
     margin: 0px 30px 15px 28px;
 }
 .top-message1{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
-    margin-top: 25px;
+    margin-top: 32px;
 }
 .top-message2{
     font-size: 16px;
     font-weight: 300;
-    margin-top: -5px;
+    margin-top: 10px;
 }
 
 .session-form{
     margin-top: -15px;
 }
 .login-message{
-    font-weight: 400;
+    font-weight: 430;
+    font-size: 24px;
 }

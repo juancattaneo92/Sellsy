@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
-      <div className="close-x" onClick={this.props.closeModal}>x</div>
+      <div className="close-x" onClick={this.props.closeModal}>X</div>
         
       <div className="session-container">
         <form onSubmit={this.handleSubmit} className="session-form-box">
