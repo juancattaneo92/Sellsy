@@ -9,18 +9,18 @@ const Header = ({ user, logout, openModal}) => {
 
   const sessionLinks = () => (
     <div>
-    <nav className="login-signup">
+    <nav className="login-button">
       {/* <Link to="/" className="header-link"><h1 className="logo">Sellsy</h1></Link> */}
       <button onClick={() => openModal('login')}>Login</button>
     </nav>
     </div >
   );
   const greeting = (user, logout) => (
-    <hgroup className="header-group">
+    <div className="header-group">
       {/* <Link to="/" className="header-link"><h1 className="logo">Sellsy</h1></Link> */}
       <button className="header-button" onClick={logout}>Log Out</button>
       <h2 className="header-name">Welcome Back, {user.f_name}!</h2>
-    </hgroup>
+    </div>
   );
 
   return (
