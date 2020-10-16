@@ -1,18 +1,25 @@
 import React from 'react';
-import {  Route, Switch, Link} from 'react-router-dom';
+import {  Route, Switch, Link, Redirect} from 'react-router-dom';
 import signupFormContainer from './session_form/signup_form_container'
 import loginFormContainer from './session_form/login_form_container'
+import Modal from './modal/modal'
+import Header from './header/header'
 
-export default () => (
+const App = () => (
   <div>
+    <Modal />
     <header>
       <Link to="/" className="header-link">
-        <h1>Welcome to Sellsy</h1>
+        <h1>Sellsy</h1>
       </Link>
     </header>
+    <Header/>
     <Switch>
-        <Route path="/" component={signupFormContainer}/>
-        <Route path="/login" component={loginFormContainer} />
+        {/* <Route path="/login" component={loginFormContainer} />
+        <Route path="/signup" component={signupFormContainer}/> */}
+        <Redirect to="/"/>
     </Switch>
   </div>
 );
+
+export default App;

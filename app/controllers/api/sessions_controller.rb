@@ -5,9 +5,10 @@ class Api::SessionsController < ApplicationController
       params[:user][:email],
       params[:user][:password]
     )
+    # debugger
     if @user
       login!(@user)
-      render "api/users/show"
+      render "api/users/show.json.jbuilder"
     else
       render json: ["Invalid email or password"], status: 401
     end
@@ -17,7 +18,7 @@ class Api::SessionsController < ApplicationController
     @user = current_user
     if @user
       logout
-      render "api/users/show"
+      render json: {}
     else
       render json: ["Needs to Log in first"], status: 404
     end

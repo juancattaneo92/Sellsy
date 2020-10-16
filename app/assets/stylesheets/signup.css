@@ -1,9 +1,96 @@
+/* 
 
-.session-submit{
-  background-color: rgb(26, 24, 24);
-  height: 50px;
-  width: 400px;
-  border-radius: 30px;
-  color: whitesmoke;
-  font-size: 25px;
+.session-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+} */
+
+/* .session-form-box{
+    position: relative;
+    background: whitesmoke;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 700px;
+    z-index: 10;
+    display: center;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+} */
+.modal-background{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(246, 246, 246, .97);
+    z-index: 10;
+}
+.session-input{
+    height: 50px;
+    width: 280px;
+    border-radius: 4px;
+    margin: 15px 15px 15px 15px;
+    border: 1.5px solid gray;
+    font-size: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.session-button{
+    background-color: rgb(26, 24, 24);
+    height: 50px;
+    width: 325px;
+    border-radius: 30px;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 300;
+    position: flex;
+    margin: 15px;
+}
+.input-label{
+    font-size: 16px;
+    text-align: left;
+    margin: 15px;
+}
+.session-button:hover {
+    background-color: rgb(53, 52, 52);
+    color: whitesmoke;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.top.button:hover {
+    cursor: pointer;
+}
+.top-button{
+    font-size: 16px;
+    height: 50px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 15px;
+}
+.top-message {
+    margin: 15px;
+}
+.top{
+    margin-top: 15px;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
 }
