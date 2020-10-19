@@ -18,12 +18,12 @@
 }
 .individual-item{
   justify-content: center;
+  margin-bottom: 100px;
   padding: 10px;
   min-width: 143px;
   max-width: 143px;
   min-height: 113px;
   max-height: 113px;
-  margin-bottom: 100px;
 }
 .image-holder{
     width: 132px;
@@ -46,4 +46,7 @@
     font-weight: 300;
     line-height: 2;
     letter-spacing: normal;
+}
+.grid-item:hover{
+  cursor: pointer;
 }
