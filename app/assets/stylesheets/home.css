@@ -1,0 +1,49 @@
+.grid-container{
+  /* background-color: blue; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.grid-item{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: whitesmoke;
+    margin: 13px;
+    border: none;
+    outline: none;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+
+}
+.individual-item{
+  justify-content: center;
+  padding: 10px;
+  min-width: 143px;
+  max-width: 143px;
+  min-height: 113px;
+  max-height: 113px;
+  margin-bottom: 100px;
+}
+.image-holder{
+    width: 132px;
+    height: 113px;
+    padding: 2px;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+}
+.name-holder{
+    margin: 10px 0px 0px 0px;
+    padding: 5px;
+    color: black;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.price-holder{
+    padding: 3px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: normal;
+}

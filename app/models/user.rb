@@ -35,4 +35,6 @@ attr_reader :password
         self.session_token ||= SecureRandom.urlsafe_base64
     end
 
+    has_many :reviews
+
 end
