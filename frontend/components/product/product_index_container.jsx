@@ -4,9 +4,9 @@ import { fetchProducts } from '../../actions/product_actions';
 import ProductIndex from './product_index';
 
 const mSTP = (state) => {
-
   return {
-    products: Object.values(state.entities.products)
+    products: Object.values(state.entities.products),
+    user: state.session.user
   };
 };
 

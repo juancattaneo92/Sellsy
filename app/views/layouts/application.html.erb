@@ -7,10 +7,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
- 
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:wght@300&family=Trirong:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <% if current_user  %>
+      <script>
+        window.user = { id:"<%=current_user.id%>", fname: "<%=current_user.f_name%>"}
+      </script>
+      <%else  %>
+      <script>
+        window.user = null
+      </script>
+    <% end %>
+    <%= yield %>
   </head>
 
   <body>
-    <%= yield %>
   </body>
 </html>

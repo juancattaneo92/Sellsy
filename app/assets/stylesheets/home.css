@@ -1,52 +1,77 @@
-.grid-container{
-  /* background-color: blue; */
+.message-main{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-}
-.grid-item{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: whitesmoke;
-    margin: 13px;
-    border: none;
-    outline: none;
-    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
 
 }
-.individual-item{
+.message-box{
+  width: 70vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+
+} 
+.container-main{
+  display: flex;
   justify-content: center;
-  margin-bottom: 100px;
-  padding: 10px;
-  min-width: 143px;
-  max-width: 143px;
-  min-height: 113px;
-  max-height: 113px;
+}
+.container-items{
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.message-style{
+    font-size: 35px;
+    font-family: 'Trirong', serif;
+    font-weight: 500;
+
+
+}
+.grid-main{
+  display: flex;
+  justify-content: center;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+.grid-item{
+  justify-content: center;
+  padding: 5px;
+  min-width: 200px;
+  max-width: 250px;
+
 }
 .image-holder{
-    width: 132px;
-    height: 113px;
-    padding: 2px;
-    border: 3px;
+    width: 240px;
+    height: 180px;
+    border: 1px;
     border-color: black;
     border-style: solid;
 }
 .name-holder{
-    margin: 10px 0px 0px 0px;
-    padding: 5px;
+    padding: 8px 0px 0px 0px;
     color: black;
-    font-size: 14px;
-    font-weight: lighter;
-}
-.price-holder{
-    padding: 3px;
     font-size: 16px;
     font-weight: 300;
+    
+}
+.price-holder{
+    font-size: 16px;
+    font-weight: 600;
     line-height: 2;
     letter-spacing: normal;
 }
 .grid-item:hover{
   cursor: pointer;
 }
+
+.grid-item-link:visited{
+  text-decoration: none;
+  color: black;
+  /* text-decoration-color: none; */
+}
+.grid-item-link{
+   text-decoration: none;
+   color: black;
+   /* text-decoration-color: none; */
+}
+

@@ -10,10 +10,10 @@ export const receiveAllProducts = (products) => {
   }
 };
 
-export const receiveProduct = (product) => {
+export const receiveProduct = (payload) => {
   return {
     type: RECEIVE_PRODUCT,
-    product
+    payload
   }
 };
 

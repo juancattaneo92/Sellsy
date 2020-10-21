@@ -8,8 +8,6 @@ import SignupForm from './signup_form';
 const mSTP = ({ errors }) => {
   return {
     errors: errors.session,
-    // messageType1: 'Create your account',
-    // messageType2: 'Registration is easy.',
     formType: 'Register',
     navLink: <Link to="/login">Log In</Link>,
   };

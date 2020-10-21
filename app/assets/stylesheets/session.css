@@ -65,10 +65,10 @@ button{
     align-items: center;
     padding: 5px;
     box-sizing: border-box;
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 20px;
     cursor: pointer;
-    font-weight: 200;
+    font-weight: 100;
 }
 .close-x{
     font-size: 28px;
@@ -81,7 +81,7 @@ button{
     cursor: pointer;
     margin: auto;
     margin-right: 0;
-    font-weight: 300;
+    /* font-weight: 300; */
     align-items: center;
 }
 .close-x:hover,

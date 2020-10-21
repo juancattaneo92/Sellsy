@@ -5,7 +5,6 @@ import Header from './header/header';
 import ProductIndexContainer from './product/product_index_container';
 import ProductShowContainer from './product/product_show_container';
 
-
 const App = () => (
   <div>
     <Modal />

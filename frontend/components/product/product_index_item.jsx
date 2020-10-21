@@ -5,9 +5,9 @@ const ProductIndexItem = (props) => {
 let product = props.product
 
   return (
-    <div className="grid-item">
+    <div className="grid-main">
       <Link to={`/products/${product.id}`} className="grid-item-link">
-        <li className="individual-item">
+        <li className="grid-item">
           <div className="image-holder">Image</div>
           <div className="name-holder">{product.title}</div>
           <div className="price-holder">${product.price}.00</div>
