@@ -42,145 +42,145 @@ prod19 = Product.create(title:'Blackout Circle Clock, Monochrome Modern Décor',
 prod20 = Product.create(title:'Custom Letter Bracelet', description:'Personalized Handmade Silver Jewelry handcrafted with love.', price:'25.00', cart_id:'20')
 
 
-prod1.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image1.png"), filename:"image1.png");
-prod1.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image1.png"), filename:"image1.png");
-prod1.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image2.png"), filename:"image2.png");
-prod1.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image3.png"), filename:"image3.png");
-prod1.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image4.png"), filename:"image4.png");
-prod1.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image5.png"), filename:"image5.png");
+prod1.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/M14YnV6fZQ3HUARX2VXJp2sz"), filename:"image1.png");
+prod1.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/M14YnV6fZQ3HUARX2VXJp2sz"), filename:"image1.png");
+prod1.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/PRB7JV5TDTCsFA6sXuXG1BMh"), filename:"image2.png");
+prod1.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/vFV7mr4J96YPgk5BdeRi8YVc"), filename:"image3.png");
+prod1.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/23QDZij2dazJWYMiX4qeLLa4"), filename:"image4.png");
+prod1.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/auFkS1Lz8xurri3iyt86Z6F8"), filename:"image5.png");
 
-prod2.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image6.png"), filename:"image6.png");
-prod2.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image6.png"), filename:"image6.png");
-prod2.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image7.png"), filename:"image7.png");
-prod2.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image8.png"), filename:"image8.png");
-prod2.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image9.png"), filename:"image9.png");
-prod2.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image10.png"), filename:"image10.png");
+prod2.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/VEn7MvAvMMpWjAT7d5TjTGKW"), filename:"image6.png");
+prod2.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/VEn7MvAvMMpWjAT7d5TjTGKW"), filename:"image6.png");
+prod2.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/sB83o5u7KVZhs1YHJxhk2SX5"), filename:"image7.png");
+prod2.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/LvSyZ6yQee1JP27ft1iabtD7"), filename:"image8.png");
+prod2.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/VyHYp94et6e26VS5wDuHhMBR"), filename:"image9.png");
+prod2.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/iikB1zdrrkKzK9X1u4Aub78M"), filename:"image10.png");
 
-prod3.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image11.png"), filename:"image11.png");
-prod3.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image11.png"), filename:"image11.png");
-prod3.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image12.png"), filename:"image12.png");
-prod3.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image13.png"), filename:"image13.png");
-prod3.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image14.png"), filename:"image14.png");
-prod3.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image15.png"), filename:"image15.png");
+prod3.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/6u9BqSMPqi2vXUXb8RXNuRpN"), filename:"image11.png");
+prod3.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/6u9BqSMPqi2vXUXb8RXNuRpN"), filename:"image11.png");
+prod3.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/8NtV8A6wVenEBHiCQHWrj9HH"), filename:"image12.png");
+prod3.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/wpKkUNHgzGbPiL79JX7PXBHe"), filename:"image13.png");
+prod3.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/WLPdRKrEYQQzEhSa1mtUD66i"), filename:"image14.png");
+prod3.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/d8zkCP8pLNsuyyUyQS2CYam4"), filename:"image15.png");
 
-prod4.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image16.png"), filename:"image16.png");
-prod4.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image16.png"), filename:"image16.png");
-prod4.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image17.png"), filename:"image17.png");
-prod4.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image18.png"), filename:"image18.png");
-prod4.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image19.png"), filename:"image19.png");
-prod4.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image20.png"), filename:"image20.png");
+prod4.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/2PcjgMWq8NQ6mSjggkiWe7ek"), filename:"image16.png");
+prod4.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/2PcjgMWq8NQ6mSjggkiWe7ek"), filename:"image16.png");
+prod4.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/wy2Bf4fceXJ6NLwgS42tL7uB"), filename:"image17.png");
+prod4.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/URdHqd1L4BVAMQfrmD7UG5FD"), filename:"image18.png");
+prod4.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/FkA1r7hqckXH3B7nyJEhARNz"), filename:"image19.png");
+prod4.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/Q3SjouJ37UzkCKwsBAGbAX7R"), filename:"image20.png");
 
-prod5.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image21.png"), filename:"image21.png");
-prod5.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image21.png"), filename:"image21.png");
-prod5.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image22.png"), filename:"image22.png");
-prod5.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image23.png"), filename:"image23.png");
-prod5.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image24.png"), filename:"image24.png");
-prod5.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image25.png"), filename:"image25.png");
+prod5.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/2McetRjzixccQEiQCXNUThsW"), filename:"image21.png");
+prod5.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/2McetRjzixccQEiQCXNUThsW"), filename:"image21.png");
+prod5.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/CfDAPobJTN5BTUCJqZKS9Vnh"), filename:"image22.png");
+prod5.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/Dau9UJXTnKLshurGa4ht9U8t"), filename:"image23.png");
+prod5.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/tGassjie8x7QBz9bx2QyL5GB"), filename:"image24.png");
+prod5.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/XcUsWRQxmQ1WgEkfFhA5FDdK"), filename:"image25.png");
 
-prod6.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image26.png"), filename:"image26.png");
-prod6.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image26.png"), filename:"image26.png");
-prod6.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image27.png"), filename:"image27.png");
-prod6.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image28.png"), filename:"image28.png");
-prod6.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image29.png"), filename:"image29.png");
-prod6.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image30.png"), filename:"image30.png");
+prod6.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/CdoyaKFx2revHH3XZtZehaBJ"), filename:"image26.png");
+prod6.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/CdoyaKFx2revHH3XZtZehaBJ"), filename:"image26.png");
+prod6.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/4z6GbkWpeQ9Y9K4Qg5EYtJEW"), filename:"image27.png");
+prod6.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/LZntzP7cLusouw3KkPfMyvU4"), filename:"image28.png");
+prod6.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/gH6NkKt78UHghgBxHAdw7mdM"), filename:"image29.png");
+prod6.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/HGM5YYaWjQdwXq9aUQnyf3wa"), filename:"image30.png");
 
-prod7.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image31.png"), filename:"image31.png");
-prod7.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image31.png"), filename:"image31.png");
-prod7.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image32.png"), filename:"image32.png");
-prod7.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image33.png"), filename:"image33.png");
-prod7.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image34.png"), filename:"image34.png");
-prod7.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image35.png"), filename:"image35.png");
+prod7.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/JarK148io5ET8gn2RvMk5ZWy"), filename:"image31.png");
+prod7.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/JarK148io5ET8gn2RvMk5ZWy"), filename:"image31.png");
+prod7.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/G6MppQwRQrNrq5KRCDSYEx2M"), filename:"image32.png");
+prod7.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/6PJCovQ8T6ioLTG3E6AS4vLE"), filename:"image33.png");
+prod7.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/3jA9qYL6rwgijDePX8whXVbK"), filename:"image34.png");
+prod7.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/4UQZMyVA1Rt48yAfrMY4S7rz"), filename:"image35.png");
 
-prod8.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image36.png"), filename:"image36.png");
-prod8.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image36.png"), filename:"image36.png");
-prod8.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image37.png"), filename:"image37.png");
-prod8.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image38.png"), filename:"image38.png");
-prod8.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image39.png"), filename:"image39.png");
-prod8.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image40.png"), filename:"image40.png");
+prod8.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/bZq8KtpNjm6rWUrp8ECTnm8w"), filename:"image36.png");
+prod8.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/bZq8KtpNjm6rWUrp8ECTnm8w"), filename:"image36.png");
+prod8.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/CgJgvdKbY2N8ZDiFmPLUKE8s"), filename:"image37.png");
+prod8.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/FxXnF2dPoicxvECGt6owXm99"), filename:"image38.png");
+prod8.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/BvCcsypfMC4wsn8QwB4JNzjz"), filename:"image39.png");
+prod8.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/WFJgvsNUvNnZPr8yeWbhK3Ns"), filename:"image40.png");
 
-prod9.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image41.png"), filename:"image41.png");
-prod9.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image41.png"), filename:"image41.png");
-prod9.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image42.png"), filename:"image42.png");
-prod9.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image43.png"), filename:"image43.png");
-prod9.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image44.png"), filename:"image44.png");
-prod9.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image45.png"), filename:"image45.png");
+prod9.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/XM2qbhmXdQU6tYgFWFuiE7MD"), filename:"image41.png");
+prod9.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/XM2qbhmXdQU6tYgFWFuiE7MD"), filename:"image41.png");
+prod9.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/cYNW9JLYMDGjQTrasxk5uvLw"), filename:"image42.png");
+prod9.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/sPSApx2z99ec95VzNvHpnRty"), filename:"image43.png");
+prod9.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/1R6L31eWriZk5fN4E6jK7SAv"), filename:"image44.png");
+prod9.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/vgKbmDNrRaVdgFGDxobc4k9W"), filename:"image45.png");
 
-prod10.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image46.png"), filename:"image46.png");
-prod10.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image46.png"), filename:"image46.png");
-prod10.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image47.png"), filename:"image47.png");
-prod10.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image48.png"), filename:"image48.png");
-prod10.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image49.png"), filename:"image49.png");
-prod10.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image50.png"), filename:"image50.png");
+prod10.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/udS7FBLkEZYorXKuPwFzy8pb"), filename:"image46.png");
+prod10.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/udS7FBLkEZYorXKuPwFzy8pb"), filename:"image46.png");
+prod10.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/9yrP1yCzDiW4GuJq8zMdrGbE"), filename:"image47.png");
+prod10.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/3HfMyyR5b6zRySPmuTxhLU1a"), filename:"image48.png");
+prod10.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/gpDkYDkPZN4uSVmjJyxb74m8"), filename:"image49.png");
+prod10.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/KMhgRQtChP9Dygs91U8MniWp"), filename:"image50.png");
 
-prod11.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image51.png"), filename:"image51.png");
-prod11.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image51.png"), filename:"image51.png");
-prod11.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image52.png"), filename:"image52.png");
-prod11.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image53.png"), filename:"image53.png");
-prod11.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image54.png"), filename:"image54.png");
-prod11.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image55.png"), filename:"image55.png");
+prod11.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/tgnoj7ag9mnvAToezuEy6Fj6"), filename:"image51.png");
+prod11.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/tgnoj7ag9mnvAToezuEy6Fj6"), filename:"image51.png");
+prod11.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/XaaaMib32JM4sKbjRQg9AV8Q"), filename:"image52.png");
+prod11.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/ywv5GsDp7TW4gQ2REjL7jTS2"), filename:"image53.png");
+prod11.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/pHBEDP2Qf4kQZuTisiKDAsPe"), filename:"image54.png");
+prod11.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/aNrHHDMdPXFbvKft9cFbRoif"), filename:"image55.png");
 
-prod12.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image56.png"), filename:"image56.png");
-prod12.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image56.png"), filename:"image56.png");
-prod12.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image57.png"), filename:"image57.png");
-prod12.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image58.png"), filename:"image58.png");
-prod12.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image59.png"), filename:"image59.png");
-prod12.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image60.png"), filename:"image60.png");
+prod12.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/8Dou2VyNqC5hQ5etUwKLcuLU"), filename:"image56.png");
+prod12.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/8Dou2VyNqC5hQ5etUwKLcuLU"), filename:"image56.png");
+prod12.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/rivMD5Bkxw2PnCbWeWFvWavh"), filename:"image57.png");
+prod12.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/QrjB365tExZKLV5EHTiRCkPW"), filename:"image58.png");
+prod12.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/wnKLhv1WWqgQSs28q3conB7z"), filename:"image59.png");
+prod12.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/oJGR7PdgA4zKRCDUKj4TpxMa"), filename:"image60.png");
 
-prod13.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image61.png"), filename:"image61.png");
-prod13.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image61.png"), filename:"image61.png");
-prod13.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image62.png"), filename:"image62.png");
-prod13.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image63.png"), filename:"image63.png");
-prod13.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image64.png"), filename:"image64.png");
-prod13.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image65.png"), filename:"image65.png");
+prod13.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/Bnn7gT2JhBSS6biBkJE1jZUn"), filename:"image61.png");
+prod13.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/Bnn7gT2JhBSS6biBkJE1jZUn"), filename:"image61.png");
+prod13.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/iv52Lot25E2QTqnzgoq7B5i5"), filename:"image62.png");
+prod13.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/FGbmJbebmJXyk1ztiFEG1nSw"), filename:"image63.png");
+prod13.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/ybamcCV3Xm6ZwDCCkwEjZCqJ"), filename:"image64.png");
+prod13.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/548pkuke6aMrDm1M5YX4EVhQ"), filename:"image65.png");
 
-prod14.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image66.png"), filename:"image66.png");
-prod14.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image66.png"), filename:"image66.png");
-prod14.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image67.png"), filename:"image67.png");
-prod14.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image68.png"), filename:"image68.png");
-prod14.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image69.png"), filename:"image69.png");
-prod14.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image70.png"), filename:"image70.png");
+prod14.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/hpNzXm4WekYYt4QTZ6KB29n8"), filename:"image66.png");
+prod14.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/hpNzXm4WekYYt4QTZ6KB29n8"), filename:"image66.png");
+prod14.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/J7fmriB8TieEtBdQoL3uFg9Y"), filename:"image67.png");
+prod14.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/94u8u1AVXfhxdNCcGQ8weEF2"), filename:"image68.png");
+prod14.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/Sv2eRr4oFAEVAhnR3txkvRTH"), filename:"image69.png");
+prod14.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/52a46ozKpHfRL5UGpbTrc1TY"), filename:"image70.png");
 
-prod15.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image71.png"), filename:"image71.png");
-prod15.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image71.png"), filename:"image71.png");
-prod15.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image72.png"), filename:"image72.png");
-prod15.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image73.png"), filename:"image73.png");
-prod15.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image74.png"), filename:"image74.png");
-prod15.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image75.png"), filename:"image75.png");
+prod15.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/RscNow2FUTZFFAcLtkBSswxB"), filename:"image71.png");
+prod15.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/RscNow2FUTZFFAcLtkBSswxB"), filename:"image71.png");
+prod15.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/i6YHYpoCY8w2zeKW2DAy9bja"), filename:"image72.png");
+prod15.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/VXcfhnTNtAW9tpKaW7yD1i4A"), filename:"image73.png");
+prod15.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/ZX5QSGR3o5hYeDc59q4C1CaA"), filename:"image74.png");
+prod15.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/SUE6QRmb7fwzi9aHwff2HRA1"), filename:"image75.png");
 
-prod16.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image76.png"), filename:"image76.png");
-prod16.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image76.png"), filename:"image76.png");
-prod16.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image77.png"), filename:"image77.png");
-prod16.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image78.png"), filename:"image78.png");
-prod16.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image79.png"), filename:"image79.png");
-prod16.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image80.png"), filename:"image80.png");
+prod16.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/Re5KJFB6rXU7hhPqie8cTrGo"), filename:"image76.png");
+prod16.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/Re5KJFB6rXU7hhPqie8cTrGo"), filename:"image76.png");
+prod16.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/hbxk3pT7cRXz2QtRVc7CrHeR"), filename:"image77.png");
+prod16.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/CFRaMesK471s1EusV89qDJMu"), filename:"image78.png");
+prod16.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/dhLyRgsPJPPNCBVGJyG4Guch"), filename:"image79.png");
+prod16.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/371xiqGkwvkim7smbatXkCEV"), filename:"image80.png");
 
-prod17.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image81.png"), filename:"image81.png");
-prod17.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image81.png"), filename:"image81.png");
-prod17.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image82.png"), filename:"image82.png");
-prod17.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image83.png"), filename:"image83.png");
-prod17.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image84.png"), filename:"image84.png");
-prod17.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image85.png"), filename:"image85.png");
+prod17.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/UkVWWw59djQV1EW16LuYVkjD"), filename:"image81.png");
+prod17.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/UkVWWw59djQV1EW16LuYVkjD"), filename:"image81.png");
+prod17.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/J3VSGxCitLG563Gqbptn2gEr"), filename:"image82.png");
+prod17.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/45KfwqdSNU1ExbGZf1FU9Sp5"), filename:"image83.png");
+prod17.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/dwmSJ9bj2YeY3FM2kxcicf9Y"), filename:"image84.png");
+prod17.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/MvdnvxkRkWtkpae8rNENs6gj"), filename:"image85.png");
 
-prod18.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image86.png"), filename:"image86.png");
-prod18.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image86.png"), filename:"image86.png");
-prod18.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image87.png"), filename:"image87.png");
-prod18.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image88.png"), filename:"image88.png");
-prod18.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image89.png"), filename:"image98.png");
-prod18.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image90.png"), filename:"image90.png");
+prod18.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/REtLjWxUAFFuuU3tdJtiCV2K"), filename:"image86.png");
+prod18.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/REtLjWxUAFFuuU3tdJtiCV2K"), filename:"image86.png");
+prod18.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/AndMmSbpR6seFqhSQ1HySEiy"), filename:"image87.png");
+prod18.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/EUtY34kgLZrrCNYth1pmsBqS"), filename:"image88.png");
+prod18.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/cnVeXvtnjuJMuBn1864LNRZM"), filename:"image89.png");
+prod18.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/81c8Y96BtEdQuhPeBMYubNqD"), filename:"image90.png");
 
-prod19.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image91.png"), filename:"image91.png");
-prod19.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image91.png"), filename:"image91.png");
-prod19.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image92.png"), filename:"image92.png");
-prod19.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image93.png"), filename:"image93.png");
-prod19.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image94.png"), filename:"image94.png");
-prod19.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image95.png"), filename:"image95.png");
+prod19.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/wcFYjoddHRnbHobtVjZjvZug"), filename:"image91.png");
+prod19.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/wcFYjoddHRnbHobtVjZjvZug"), filename:"image91.png");
+prod19.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/YUawFs6LB3LUrQQuf5UjE6sq"), filename:"image92.png");
+prod19.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/hhpMyxPHy4tTKnS1UDLy5C2W"), filename:"image93.png");
+prod19.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/c1LW8FUfySRxdQQSycV8QGVQ"), filename:"image94.png");
+prod19.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/qGkmLawB4sfPHaEdpsBWs9LJ"), filename:"image95.png");
 
-prod20.main_photo.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image96.png"), filename:"image96.png");
-prod20.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image96.png"), filename:"image96.png");
-prod20.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image97.png"), filename:"image97.png");
-prod20.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image98.png"), filename:"image98.png");
-prod20.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image99.png"), filename:"image99.png");
-prod20.photos.attach(io: File.open("/Users/JuanCarlos/Desktop/sellsy-photos/image100.png"), filename:"image100.png");
+prod20.main_photo.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/hKKcPF6Wt4ZZrCDGeNPseqHD"), filename:"image96.png");
+prod20.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/hKKcPF6Wt4ZZrCDGeNPseqHD"), filename:"image96.png");
+prod20.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/MqBaVKB2JL8KgBhpQ5p6yQc1"), filename:"image97.png");
+prod20.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/1CZzSKoekF5nsZmhgJW3tTzK"), filename:"image98.png");
+prod20.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/47zfW3TB8P6tWm7uE6xGc4ke"), filename:"image99.png");
+prod20.photos.attach(io: open("https://sellsy-active-storage-dev.s3-us-west-1.amazonaws.com/jCNmHCkTw5hwkhSjpTJgAZqS"), filename:"image100.png");
 
 
 
