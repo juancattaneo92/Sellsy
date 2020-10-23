@@ -1,7 +1,7 @@
 @products.each do |product|
   json.set! product.id do
     json.partial! 'product', product: product
-    if products.main_photo.attached?
+    if product.main_photo.attached?
       json.main_photoUrl url_for(product.main_photo)
     else
       json.main_photoUrl ""
