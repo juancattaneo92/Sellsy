@@ -22,18 +22,33 @@ const Header = ({ user, logout, openModal}) => {
 
   return (
     <div className="header-main">
-      <div className="header-box">
+      <div className="header-box1">
         <Link to="/" className="header-link"><div className="logo">Sellsy</div></Link>
-        <div>
-          <input type="text" className="search-bar"></input>
+        <div className="search-bar">
+          <input className="text-input" type="text"></input>
+          <div className="magni-glass">
+            <i className="fa fa-search"></i>
+          </div>
         </div>   
         <div className="session-but">
         {user ? loggingOut(user, logout) : logginIn()}
         </div>
         <div className="shopping-cart">
-          {/* <span style="font-sspanze:24px" className="fa">&#xf07a;</span> */}
-        Cart</div>
-      
+          <i className="fa fa-shopping-cart"></i>
+        </div>
+      </div>
+      <div className="header-box2">
+        <div className="header-categories">
+          <div className="catergory1">Holiday Shop</div>
+          <div className="catergory2">Jewelry & Accessories</div>
+          <div className="catergory3">Clothing & Shoes</div>
+          <div className="catergory4">Home & Living</div>
+          <div className="catergory5">Wedding & Party</div>
+          <div className="catergory6">Toys & Entertainment</div>
+          <div className="catergory7">Art & Collectibles</div>
+          <div className="catergory8">Craft Supplies</div>
+          <div className="catergory9"><i className="fa fa-gift"></i>Gifts</div>
+        </div>
       </div>
     </div>
   );

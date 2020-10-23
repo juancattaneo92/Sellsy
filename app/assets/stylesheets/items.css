@@ -1,11 +1,10 @@
 .whole-showpage{
   display: flex;
   justify-content: center;
+  margin: 20px
 }
 .show-main{
   width: 70vw;
-  padding: 5px;
-  background-color: whitesmoke;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 15px;
@@ -13,68 +12,24 @@
 .show-child-right{
   display: flex;
   flex-direction: column;
-  height: 1015px;
+  height: auto;
   font-family: 'Trirong', serif;
-  border: 3px;
-  border-color: black;
-  border-style: solid;
-}
-.child-images{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 400px;
-  margin-bottom: 15px;
-  border: 3px;
-  border-color: black;
-  border-style: solid;
-}
-.small-images{
-  width: 20%;
-  height: 98%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-.carosel-images{
-  height: 50px;
-  width: 50px;
-  margin: 2px;
-  padding: 2px;
-  border: 1px;
-  border-color: black;
-  border-style: solid;
-  border-radius: 7px;
 }
 
-.big-image{
-  width: 100%;
-  height: 98%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.stars{
+  margin: 15px;
+  text-align: left;
 }
-.picture-image{
-  height: 350px;
-  width: 350px;
-  border-radius: 3%;
-  border: 1px;
-  border-color: black;
-  border-style: solid;
-}
-
 .title-show{
   width: 90%;
-  height: 2%;
-  padding: 15px;
+  padding: 0px 15px 15px 15px;
   font-size: 28px;
   text-align: left;
+  height: auto;
 }
 .price-show{
   width: 90%;
-  height: 2%;
+  height: auto;
   padding: 15px;
   font-size: 32px;
   font-weight: 400;
@@ -83,16 +38,16 @@
 }
 .description-show{
   width: 90%;
-  height: 10%;
+  height: auto;
   border: 2px;
   padding: 15px;
   text-align: left;
 
 }
 .buttom-tobuy{
- width: 93%;
+ width: 85%;
   background-color: rgb(26, 24, 24);
-  height: 22px;
+  height: auto;
   border-radius: 30px;
   color: whitesmoke;
   font-size: 17px;
@@ -104,29 +59,132 @@
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-weight: 500;
 }
+.buttom-tobuy:hover{
+  cursor: pointer;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
 
 
-.child-comments{
+.review-div{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 3px;
-  border-color: black;
-  border-style: solid;
-  height: 600px;
+  font-family: 'Trirong', serif;
+  height: 400px;
+  padding: 0px 60px 15px 15px;
+  margin-right: 120px;
 }
-.comments-form-show{
+/* .comments-form-show{
   width: 100%;
   height: 10%;
   border: 2px;
   border-color: black;
   border-style: dashed;
-}
-.comments-show{
+} */
+/* .comments-show{
   width: 100%;
   height: 90%;
   border: 2px;
   border-color: black;
   border-style: dashed;
+} */
+.review-but{ 
+  background-color: white;
+  border: 1px solid;
+  border-color: rgba(34, 34, 34, 0.15);
+  font-weight: 550;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  width: 120px;
+  margin-right: 80px;
+
 }
+.title-show2{
+  width: 70%;
+  padding: 15px 0px 15px 0px;
+  font-size: 28px;
+  text-align: left;
+}
+.review-index-div{
+  padding: 8px 15px 15px 0px;
+}
+
+.review-header{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.rating-avg-rev > .stars-rev{
+  text-align: left;
+  margin: 3px 0px 4px 0px;
+}
+.stars:hover{
+  cursor: pointer;
+}
+
+
+
+/* pictures */
+
+.show-child-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  margin-bottom: 15px;
+}
+.picture-container1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.big-pic{
+  width: 100%;
+  height: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.small-pics{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture-image{
+  height: 450px;
+  width: 520px;
+  border-radius: 3%;
+}
+
+.small-pictures{
+  height: 55px;
+  width: 55px;
+  margin: 5px;
+  border-radius: 7px;
+}
+
+.picture-container2{
+  display: flex;
+  flex-direction: column;
+  width: 10vw;
+}
+
+.small-pictures:hover{
+  cursor: pointer;
+  border: 2px solid;
+  border-color: black;
+}
+.picture-image:hover{
+  cursor: pointer;
+}
+

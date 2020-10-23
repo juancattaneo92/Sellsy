@@ -1,6 +1,7 @@
 .message-main{
   display: flex;
   justify-content: center;
+  
 
 }
 .message-box{
@@ -22,11 +23,11 @@
   align-items: center;
 }
 .message-style{
-    font-size: 35px;
-    font-family: 'Trirong', serif;
-    font-weight: 500;
-
-
+font-size: 38px;
+    font-family: "Guardian-EgypTT",serif;
+    font-weight: 100;
+    letter-spacing: -2.5px;
+    -webkit-font-smoothing: antialiased;
 }
 .grid-main{
   display: flex;
@@ -40,12 +41,12 @@
   max-width: 250px;
 
 }
-.image-holder{
-    width: 240px;
-    height: 180px;
-    border: 1px;
+.image-holder > img{
+    width: 250px;
+    height: 220px;
+    /* border: 1px;
     border-color: black;
-    border-style: solid;
+    border-style: solid; */
 }
 .name-holder{
     padding: 8px 0px 0px 0px;

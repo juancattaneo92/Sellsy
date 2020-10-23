@@ -3,6 +3,8 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import ReviewFormContainer from '../reviews/review_form_container';
+import UpdateReviewFormContainer from "../reviews/update_review_container";
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -15,6 +17,12 @@ function Modal({ modal, closeModal }) {
       break;
     case 'signup':
       component = <SignupFormContainer />;
+      break;
+    case "review":
+      component = <ReviewFormContainer />;
+      break;
+    case "update-review":
+      component = <UpdateReviewFormContainer />;
       break;
     default:
       return null;
@@ -36,10 +44,7 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => {
   return {
-    closeModal: () => {
-
-      dispatch(closeModal())
-  }
+    closeModal: () => { dispatch(closeModal()) }
 }
 };
 
