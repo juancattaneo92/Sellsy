@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewContainer from "../reviews/review_container";
-import AverageRating from "../reviews/average_rating";
+import AverageRatingContainer from "../reviews/average_rating_container";
 import PhotoShowMain from "../product/photos_show_main";
 
 class ProductShow extends React.Component{
@@ -47,7 +47,7 @@ class ProductShow extends React.Component{
         </div>
 
         <div className="show-child-right">
-            <div className="rating-avg"><AverageRating reviews={this.props.reviews}/></div>
+            <div className="rating-avg"><AverageRatingContainer productId={this.props.product.id} reviews={this.props.reviews} /></div>
             <div className="title-show">{this.props.product.title}</div>
             <div className="price-show">${this.props.product.price}</div>
             <div className="description-show">{this.props.product.description}</div>

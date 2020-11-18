@@ -17,7 +17,8 @@ class Api::ReviewsController < ApplicationController
         @review = Review.create(review_params)
         @review.user_id = current_user.id
         if @review.save 
-            redirect_to api_review_url(@review.id) 
+            render :show
+            # redirect_to api_review_url(@review.id) 
         else
             render json: @review.errors.full_messages, status: 422
         end

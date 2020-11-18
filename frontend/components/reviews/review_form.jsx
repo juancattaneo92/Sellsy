@@ -26,9 +26,7 @@ class ReviewForm extends React.Component {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
+          <li key={`error-${i}`}>{error}</li>
         ))}
       </ul>
     )
@@ -53,12 +51,12 @@ class ReviewForm extends React.Component {
                 name="rating"
                 value={ratingValue}
                 onClick={() => updateRating(ratingValue)} />
-                <div>
-                  <i className="far fa-star"
+                {/* <div> */}
+                  <i className="fas fa-star"
                     id={ratingValue <= (this.state.rating) ? "checked" : "notChecked"}
                     onMouseEnter={() => updateRating(ratingValue)}
                   />
-                </div>
+                {/* </div> */}
             </label>
           )
         })}
@@ -81,8 +79,7 @@ class ReviewForm extends React.Component {
           className="review-form"
           onSubmit={this.handleSubmit}>
           <div className="rating-div">
-            <label>Rating:
-                        </label>
+            <label>Rating:</label>
             {this.StarRating()}
           </div>
           <div>

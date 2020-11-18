@@ -3,9 +3,9 @@ import { RECEIVE_REVIEW,
          RECEIVE_REVIEWS, 
          REMOVE_REVIEW, 
          RETURN_SINGLE_REVIEW } 
-from "../actions/review_actions"
+from "../actions/review_actions";
 
-const ReviewsReducer = (state = {}, action) => {
+const reviewsReducer = (state = {}, action) => {
   Object.freeze(state)
   let newState = Object.assign({}, state)
   switch (action.type) {
@@ -23,4 +23,4 @@ const ReviewsReducer = (state = {}, action) => {
   }
 }
 
-export default ReviewsReducer
+export default reviewsReducer;

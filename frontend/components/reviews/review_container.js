@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import Review from "./review"
-import { deleteReview, returnSingleReview } from "../../actions/review_actions"
+import Review from "./review";
+import { deleteReview, returnSingleReview } from "../../actions/review_actions";
 
 const mDTP = dispatch => {
   return ({

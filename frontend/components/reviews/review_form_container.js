@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { createReview, updateReview, clearReviewErrors } from "../../actions/review_actions";
 import { fetchProduct } from "../../actions/product_actions";
-import ReviewFrom from "./review_form";
+import ReviewForm from "./review_form";
 import { closeModal } from "../../actions/modal_actions";
 
 
@@ -24,4 +24,4 @@ const mDTP = dispatch => {
   })
 }
 
-export default connect(mSTP, mDTP)(ReviewFrom)
+export default connect(mSTP, mDTP)(ReviewForm)

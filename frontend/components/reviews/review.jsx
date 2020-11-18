@@ -2,9 +2,7 @@ import React from "react"
 import ReviewIndex from "./review_index"
 
 class Review extends React.Component {
-  constructor(props){
-    super(props);
-  }
+
 
   componentDidMount() {
     this.props.requestReviews(this.props.product.id)
@@ -29,12 +27,12 @@ class Review extends React.Component {
       <div className="review-div">
 
         <div className="review-header">
-          <div className="title-show2">Reviews</div> 
+          <div className="title-show2">Reviews
           <div className="review-button">
-            {this.props.userId === null ? null : <button className="review-but" onClick={() => this.props.openModal("reviews")}>Create Review</button>}
+            {this.props.userId === null ? null : <button className="review-but" onClick={() => this.props.openModal("review")}>Create a Review</button>}
           <i onClick={this.reviewToggle}></i>
           </div>
-        </div>
+       
           <div className="review-cont">
             {reviewsRev.map(review =>
               <ReviewIndex
@@ -42,13 +40,14 @@ class Review extends React.Component {
                 review={review}
                 userId={this.props.userId}
                 deleteReview={this.props.deleteReview}
-                returnSingleReview={this.props.returnSingleReview
-                }
+                returnSingleReview={this.props.returnSingleReview}
                 openModal={this.props.openModal}
               />)}
-        </div>
-
+              </div>
+         
+          </div>
       </div>
+      </div> 
     )
   }
 

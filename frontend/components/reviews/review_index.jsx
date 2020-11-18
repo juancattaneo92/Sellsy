@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+// import AverageRating from "./average_rating";
 
 class ReviewIndex extends React.Component {
   constructor(props) {
@@ -18,12 +19,12 @@ class ReviewIndex extends React.Component {
         {[...Array(5)].map((star, i) => {
 
           return (
-            <div>
-              <i class="far fa-star"
+            // <div>
+              <i className="fas fa-star"
                 key={i}
                 id={i + 1 <= this.props.review.rating ? "checked" : "notChecked"}>
               </i>
-            </div>
+            // </div>
           )
         })}
       </div>
@@ -36,11 +37,13 @@ class ReviewIndex extends React.Component {
 
     return (
       <div className="review-index-div">
-        <div className="rating-avg-rev">
-          <div className="stars-rev">★★★★★</div>
-        </div>
+        {/* <div className="rating-avg-rev"> */}
+          {/* <div className="stars-rev">★★★★★</div> */}
+    <div className="stars-icon-div">{this.currentStars()}</div>
+          {/* <div className="stars-rev"><AverageRating/></div> */}
+        {/* </div> */}
         <div className="user-name">
-          <div className="reviewing-user">{this.props.review.user.f_name}</div>
+          <div className="reviewing-user">{this.props.review.user}</div>
         </div>
         <div className="body-cont">
           <div>{this.props.review.body}</div>
@@ -52,4 +55,4 @@ class ReviewIndex extends React.Component {
   }
 }
 
-export default ReviewIndex
+export default ReviewIndex;
