@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchProducts } from '../../actions/product_actions';
+import { fetchProducts, getSearchProducts } from '../../actions/product_actions';
 import ProductIndex from './product_index';
 import { requestReviews } from "../../actions/review_actions";
 
@@ -15,7 +15,8 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
   return {
     fetchProducts: () => dispatch(fetchProducts()),
-    requestReviews: productId => dispatch(requestReviews(productId))
+    requestReviews: productId => dispatch(requestReviews(productId)),
+    getSearchProducts: (query) => dispatch(getSearchProducts(query))
   };
 };
 

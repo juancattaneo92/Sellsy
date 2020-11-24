@@ -4,14 +4,19 @@ import Modal from './modal/modal';
 import Header from './header/header';
 import ProductIndexContainer from './product/product_index_container';
 import ProductShowContainer from './product/product_show_container';
+import CategoryShowContainer from './categories/category_show_container';
+// import CategoryIndexContainer from "./category_index/category_index_container";
+
 
 const App = () => (
   <div>
     <Modal />
     <Header/>
     <Switch>  
+      <Route exact path="/search/:searchQuery" component={ProductIndexContainer}/>
       <Route exact path="/" component={ProductIndexContainer}/> 
       <Route exact path="/products/:productId" component={ProductShowContainer} />   
+      <Route exact path='/categories/:categoryId' component={CategoryShowContainer} />
       <Redirect to="/"/>  
     </Switch>
   </div>

@@ -28,3 +28,12 @@ export const fetchProduct = (productId) => dispatch => {
   return ProductAPIUtil.fetchProduct(productId).then(
     result => dispatch(receiveProduct(result)))
 };
+
+export const getSearchProducts = (query) => dispatch => {
+  return ProductAPIUtil.getSearchProducts(query)
+    .then(products => {
+      return dispatch(receiveAllProducts(products))
+    },
+      error => dispatch(receiveErrors(error.responseJSON))
+    )
+}

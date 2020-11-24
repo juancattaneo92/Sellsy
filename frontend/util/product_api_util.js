@@ -11,4 +11,11 @@ export const fetchProduct = (productId) => {
   })
 }
 
+export const getSearchProducts = (query) => (
+  $.ajax({
+    method: "GET",
+    url: "/api/products/search",
+    data: { query: query }
 
+  })
+)

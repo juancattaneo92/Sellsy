@@ -8,10 +8,13 @@ class ProductIndex extends React.Component{
     
   }
   componentDidMount(){
-    this.props.fetchProducts()
-    .then( () => {
-        this.setState({loading: false})
-    })
+    if (this.props.match.params.searchQuery === undefined) {
+      this.props.fetchProducts()
+      .then( () => {this.setState({loading: false}) })
+    }
+    else {
+      this.props.getSearchProducts(this.props.match.params.searchQuery);
+    }
   }
   welcomeMessage(){
     if(this.props.user){
