@@ -3,8 +3,22 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 6, allow_nil: true }
     validates :password_digest, :f_name, presence: true
     validates :session_token, presence: true, uniqueness: true
+
+    has_many :reviews,
+    foreign_key: :user_id,
+    class_name: :Review
+
+    has_many :cart_items,
+    foreign_key: :user_id,
+    class_name: :Cart
+
+    has_many :products,
+    through: :cart_items,
+    source: :product
    
-attr_reader :password
+
+
+    attr_reader :password
     after_initialize :ensure_session_token
     
     def self.find_by_credentials(email, password)
@@ -34,7 +48,5 @@ attr_reader :password
     def ensure_session_token
         self.session_token ||= SecureRandom.urlsafe_base64
     end
-
-    has_many :reviews
 
 end

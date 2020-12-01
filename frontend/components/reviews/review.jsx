@@ -27,12 +27,12 @@ class Review extends React.Component {
       <div className="review-div">
 
         <div className="review-header">
-          <div className="title-show2">Reviews
-          <div className="review-button">
-            {this.props.userId === null ? null : <button className="review-but" onClick={() => this.props.openModal("review")}>Create a Review</button>}
-          <i onClick={this.reviewToggle}></i>
-          </div>
-       
+            <div className="title-show2">Reviews
+            <div className="review-button">
+              {this.props.userId === null ? null : <button className="review-but" onClick={() => this.props.openModal("review")}>Create a Review</button>}
+            <i onClick={this.reviewToggle}></i>
+            </div>
+            </div>
           <div className="review-cont">
             {reviewsRev.map(review =>
               <ReviewIndex
@@ -46,7 +46,7 @@ class Review extends React.Component {
               </div>
          
           </div>
-      </div>
+      
       </div> 
     )
   }

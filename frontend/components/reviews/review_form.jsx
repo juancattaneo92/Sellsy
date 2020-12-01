@@ -70,27 +70,33 @@ class ReviewForm extends React.Component {
 
   render() {
     return (
-      <div className="review-form">
-        <div onClick={this.props.closeModal} className='close-x'>×</div>
+      <div className="review-form-div">
+        <div onClick={this.props.closeModal} className='close-X' id="reviewButton">×</div>
+
+        <form className="review-form" onSubmit={this.handleSubmit}>
+            <div className="review-title">Leave Review</div>
+            <div className="body-div">
+              {/* <label>Body:</label> */}
+              <textarea
+                id="textArea"
+                type="text"
+                value={this.state.body}
+                onChange={this.handleInput("body")}/>
+            </div>
+
+            <div className="rating-div">
+              {/* <label>Rating:</label>  */}
+              {this.StarRating()}
+            </div>
+            <div className="submit-but-div">
+            <button id="review" >Submit Review</button>
+            </div>
+        </form>
+
         <div className="review-errors">
           {this.renderErrors()}
         </div>
-        <form
-          className="review-form"
-          onSubmit={this.handleSubmit}>
-          <div className="rating-div">
-            <label>Rating:</label>
-            {this.StarRating()}
-          </div>
-          <div>
-            <label>Body:</label>
-            <textarea
-              type="text"
-              value={this.state.body}
-              onChange={this.handleInput("body")}/>
-          </div>
-          <button >Submit Review</button>
-        </form>
+
       </div>
     )
   }

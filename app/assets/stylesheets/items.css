@@ -1,7 +1,8 @@
 .whole-showpage{
   display: flex;
   justify-content: center;
-  margin: 20px
+  margin: 20px;
+  margin-top: 30px;
 }
 .show-main{
   width: 70vw;
@@ -9,6 +10,9 @@
   grid-template-columns: 2fr 1fr;
   grid-gap: 15px;
 }
+
+/* RATING/TITLE/PRICE/DESCRIPTION: */
+
 .show-child-right{
   display: flex;
   flex-direction: column;
@@ -20,17 +24,26 @@
   margin: 15px;
   text-align: left;
 }
+
+.rating-avg{
+  height: auto;
+  text-align: left;
+  padding: 0px 0px 4px 8px;
+
+}
 .title-show{
   width: 90%;
-  padding: 0px 15px 15px 15px;
+  padding: 15px 15px 5px 15px;
   font-size: 28px;
   text-align: left;
   height: auto;
+  font-weight: bolder;
 }
 .price-show{
   width: 90%;
   height: auto;
-  padding: 15px;
+  padding: 3px;
+  padding-left: 15px;
   font-size: 32px;
   font-weight: 400;
   text-align: left;
@@ -42,6 +55,7 @@
   border: 2px;
   padding: 15px;
   text-align: left;
+  font-size: 20px;
 
 }
 .buttom-tobuy{
@@ -58,6 +72,7 @@
   padding: 15px;
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-weight: 500;
+  margin-left: 15px;
 }
 .buttom-tobuy:hover{
   cursor: pointer;
@@ -66,6 +81,7 @@
   opacity: 0.8;
 }
 
+/* REVIEW:  */
 
 .review-div{
   display: flex;
@@ -73,7 +89,8 @@
   font-family: 'Trirong', serif;
   height: 400px;
   padding: 0px 60px 15px 15px;
-  margin-right: 120px;
+  margin-top: 30px;
+  /* margin-right: 120px; */
 }
 /* .comments-form-show{
   width: 100%;
@@ -97,25 +114,31 @@
   font-size: 13px;
   -webkit-font-smoothing: antialiased;
   width: 120px;
-  margin-right: 80px;
+  /* margin-right: 80px; */
 
 }
 .title-show2{
-  width: 70%;
-  padding: 15px 0px 15px 0px;
+  width: 95%;
+  padding: 0px 0px 10px 0px;
   font-size: 28px;
-  text-align: left;
-}
-.review-index-div{
-  padding: 8px 15px 15px 0px;
+  text-align: center;
+  /* background-color: blue; */
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(155, 151, 151);
+  font-weight: bolder;
 }
 
 .review-header{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 10px; */
+  /* padding-bottom: 10px; */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+  flex-direction: column;
+  /* background-color: red; */
 
 }
 .rating-avg-rev > .stars-rev{
@@ -126,9 +149,28 @@
   cursor: pointer;
 }
 
+.review-index-div{
+  /* border-bottom: 1px solid rgb(155, 151, 151); */
+  padding: 15px 15px 0px 15px;
+}
+.borderLine{
+  border-bottom: 1px solid rgb(155, 151, 151);
+  padding: 5px 0px 5px 0px;
+}
+
+.user-name{
+  font-size: 20px;
+  font-weight: bolder;
+}
+.stars-icon-div{
+padding: 0px 0px 5px 0px;
+}
+.body-cont{
+padding: 5px 0px 5px 0px;
+}
 
 
-/* pictures */
+/* PICTURES */
 
 .show-child-left{
   display: flex;
@@ -176,7 +218,8 @@
 .picture-container2{
   display: flex;
   flex-direction: column;
-  width: 10vw;
+  width: 6vw;
+  padding-left: 30px;
 }
 
 .small-pictures:hover{

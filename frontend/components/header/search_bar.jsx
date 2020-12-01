@@ -8,12 +8,9 @@ class SearchBar extends React.Component {
       searchQuery: ''
     };
     this.update = this.update.bind(this);
-    this.gotfocus = this.gotfocus.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
-  gotfocus(event) {
-  }
 
   update(event) {
     event.preventDefault();
@@ -30,10 +27,10 @@ class SearchBar extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit}
+          className="search-bar-form"
+>
 
-        className="search-products-form">
-
-        <input className="searchBar" id="inputSearchText"
+        <input className="search-bar"
           onChange={this.update}
 
           type="text"
@@ -41,7 +38,7 @@ class SearchBar extends React.Component {
         />
 
         <div className="searchIconDiv">
-          <button>
+          <button id="search"> 
             <i className="fas fa-search searchBarIcon"></i>
           </button>
         </div>

@@ -21,13 +21,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  align-items: flex-start;
 }
 .message-style{
-font-size: 38px;
-    font-family: "Guardian-EgypTT",serif;
-    font-weight: 100;
-    letter-spacing: -2.5px;
-    -webkit-font-smoothing: antialiased;
+  font-size: 35px;
+  font-family: "Guardian-EgypTT",serif;
+  font-weight: 100;
+  letter-spacing: -1.5px;
+  -webkit-font-smoothing: antialiased;
 }
 .grid-main{
   display: flex;

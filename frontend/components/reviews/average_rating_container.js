@@ -6,7 +6,6 @@ const mSTP = (state, ownProps) => {
   return ({
     reviews: ownProps.reviews,
     productId: ownProps.productId,
-
   })
 }
 

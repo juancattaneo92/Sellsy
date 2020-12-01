@@ -1,0 +1,78 @@
+.cart-wholePage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-buy-div{
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout-div{
+    display: flex;
+    flex-direction: column;
+    border-radius: 13px;
+    border: 1px solid black;
+    margin: 15px;
+    height: 250px;
+    width: 250px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.buy-page-div{
+  display: flex;
+  width: 60vw;
+}
+
+.header{
+  font-size: 35px;
+  font-family: "Guardian-EgypTT",serif;
+  font-weight: 100;
+  letter-spacing: -1.5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cart-item-div{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+
+.public-product-links{
+  outline: none;
+}
+
+.idx-images{
+  height: 160px;
+  width: 192px;
+  border-radius: 9px;
+}
+
+.button .checkout{
+  color:white;
+  background-color: black;
+}
+
+.new-cart-div{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart-item-div{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-item-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
