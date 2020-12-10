@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReviewContainer from "../reviews/review_container";
+import ReviewIndexContainer from "../reviews/review_index_container";
 import AverageRatingContainer from "../reviews/average_rating_container";
 import PhotoShowMain from "../product/photos_show_main";
 // import { createCartItem } from "../../actions/shopping_cart_actions";
@@ -138,7 +138,7 @@ class ProductShow extends React.Component{
         </div>
 
           <div className="child-comments">
-            <ReviewContainer
+            <ReviewIndexContainer
               reviews={this.props.reviews}
               product={this.props.product}
               productId={this.props.product.id}

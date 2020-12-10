@@ -32,7 +32,7 @@ class SearchBar extends React.Component {
 
         <input className="search-bar"
           onChange={this.update}
-
+          placeholder="Search for anything"
           type="text"
         // value="Search for items"
         />

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ItemOrdered  from './item_ordered'
+import ItemOrdered  from './item_ordered';
 
 class CartItems extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       render: [false],
+      // loading: true,
       grandTotal: 0
     }
 
@@ -20,8 +21,20 @@ class CartItems extends React.Component {
 
 
   componentDidMount() {
-    this.props.fetchAllCartItems();
+    this.props.fetchAllCartItems()
+    // this.props.fetchProducts()
+    // .then(
+    //     this.setState({loading: false})
+    // )
+    // this.props.fetchProduct();
+
   }
+  
+  // componentWillUnmount(){
+  //   this.props.fetchProducts();
+
+
+  // }
 
   purchase() {
     this.props.userCartItems.forEach(cartItem => {
@@ -50,7 +63,7 @@ class CartItems extends React.Component {
   }
 
   uniqueCartItems() {
-    let { userCartItems } = this.props
+    let userCartItems = this.props.userCartItems
 
     let newCartItems = {}
     userCartItems.forEach(userCartItem => {
@@ -78,7 +91,7 @@ class CartItems extends React.Component {
   }
 
   filledCart(cartItemsObj) {
-    let allTotal = 0;
+    let totalAmountMoney = 0;
 
     return (
 
@@ -92,7 +105,7 @@ class CartItems extends React.Component {
         <div className="buy-page-div">
           <div className="new-cart-div"> {cartItemsObj.map(cartItem => { 
             let product = cartItem[1].product
-            allTotal += this.total(cartItem);
+            totalAmountMoney += this.total(cartItem);
 
               return (
               <div key={product.id} className="cart-item-div" >
@@ -125,7 +138,7 @@ class CartItems extends React.Component {
           <div className="checkout-div">
             <div className="checkout-title">How you'll pay</div>
             <div className="checkout-subtitle">Choose Your payment method:</div>
-            <div id="all-total" className="quantity-word">Item(s) total: ${allTotal} </div>
+            <div id="all-total" className="quantity-word">Item(s) total: ${totalAmountMoney}.00 </div>
             <button onClick={() => this.purchase()} className="checkout" >Purchase</button>
           </div>
 
@@ -137,9 +150,12 @@ class CartItems extends React.Component {
   }
 
   render() {
-    let cartItemsObj = Object.entries(this.uniqueCartItems());
-
-    return (cartItemsObj.length === 0 ? this.emptyCart() : this.filledCart(cartItemsObj))
+    // if (this.state.loading){
+    //   return (<div>REact Broken</div>)
+    // }else{
+      let cartItemsObj = Object.entries(this.uniqueCartItems());
+      return (cartItemsObj.length === 0 ? this.emptyCart() : this.filledCart(cartItemsObj))
+    // }
   }
 }
 

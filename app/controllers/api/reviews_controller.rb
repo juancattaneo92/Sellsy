@@ -10,15 +10,14 @@ class Api::ReviewsController < ApplicationController
 
     def show
         @review = Review.find(params[:id])
- 
     end
 
     def create 
         @review = Review.create(review_params)
         @review.user_id = current_user.id
         if @review.save 
-            render :show
-            # redirect_to api_review_url(@review.id) 
+            # render :show
+            redirect_to api_review_url(@review.id) 
         else
             render json: @review.errors.full_messages, status: 422
         end
@@ -28,6 +27,7 @@ class Api::ReviewsController < ApplicationController
         @review = Review.find_by(id: params[:id])
 
         if @review.update(review_params)
+            # render :show
             render partial: 'api/reviews/review', object: @review
         else
             render json: @review.errors.full_messages, status: 422

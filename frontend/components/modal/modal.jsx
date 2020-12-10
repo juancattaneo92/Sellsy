@@ -3,10 +3,11 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
-import ReviewFormContainer from '../reviews/review_form_container';
-import UpdateReviewFormContainer from "../reviews/update_review_container";
+import ReviewFormContainer from '../reviews/create_review_form_container';
+import EditReviewFormContainer from "../reviews/edit_review_container";
 
-function Modal({ modal, closeModal }) {
+function Modal({ modal, closeModal, clearErrors}) {
+
   if (!modal) {
     return null;
   }
@@ -21,14 +22,14 @@ function Modal({ modal, closeModal }) {
     case "review":
       component = <ReviewFormContainer />;
       break;
-    case "update-review":
-      component = <UpdateReviewFormContainer />;
+    case "edit-review":
+      component = <EditReviewFormContainer />;
       break;
     default:
       return null;
   }
   return (
-    <div className="modal-background" onClick={closeModal}>
+    <div className="modal-background" onClick={closeModal} onChange={clearErrors} >
       <div className="modal-box" onClick={e => e.stopPropagation()}>
         {component}
       </div>
@@ -38,7 +39,7 @@ function Modal({ modal, closeModal }) {
 
 const mSTP = (state) => {
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
   };
 };
 

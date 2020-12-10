@@ -1,7 +1,7 @@
 
 import { RECEIVE_REVIEW, 
          RECEIVE_REVIEWS, 
-         REMOVE_REVIEW, 
+         REMOVE_REVIEW,
          RETURN_SINGLE_REVIEW } 
 from "../actions/review_actions";
 

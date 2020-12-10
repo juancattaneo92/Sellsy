@@ -4,13 +4,13 @@ Rails.application.routes.draw do
     resource :session, only:[:new, :create, :destroy]
     resources :users 
     resources :categories
-    resources :reviews, only: [:show, :update, :destroy]
+    resources :reviews
     resources :cart_items, only: [:index, :show, :create, :destroy] do
       resources :products, only: [:index]
     end 
 
     resources :products, only:[:index, :show] do 
-      resources :reviews
+      resources :reviews , only:[:index, :create]
       collection do
         get :search, to: "products#search", as: "search"
       end

@@ -6,3 +6,15 @@ json.reviews do
 end
 
 
+# json.set! @review.id do 
+#     json.partial! 'api/reviews/review', review: @review
+# end
+
+# json.reviewers do 
+#     json.set! @review.user_id do
+#         json.partial! 'api/users/user', user: @review.user
+#         # json.photoUrls @review.author.photos.map { |file| url_for(file) }
+#     end
+# end
+
+
