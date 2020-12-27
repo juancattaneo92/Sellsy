@@ -13,10 +13,10 @@ class Api::ReviewsController < ApplicationController
     end
 
     def create 
+        # debugger
         @review = Review.create(review_params)
         @review.user_id = current_user.id
         if @review.save 
-            # render :show
             redirect_to api_review_url(@review.id) 
         else
             render json: @review.errors.full_messages, status: 422
@@ -24,15 +24,15 @@ class Api::ReviewsController < ApplicationController
     end
 
     def update 
-        @review = Review.find_by(id: params[:id])
+        @review = Review.find(params[:id])
 
         if @review.update(review_params)
-            # render :show
-            render partial: 'api/reviews/review', object: @review
+            render :show
         else
             render json: @review.errors.full_messages, status: 422
         end
     end
+
 
     def destroy 
         @review = Review.find(params[:id])
@@ -47,7 +47,7 @@ class Api::ReviewsController < ApplicationController
     private 
 
     def review_params 
-        params.require(:review).permit(:body, :rating, :user_id, :product_id)
+        params.require(:review).permit(:id, :body, :rating, :user_id, :product_id)
     end
 
 end

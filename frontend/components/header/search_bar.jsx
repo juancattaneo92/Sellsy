@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
           onChange={this.update}
           placeholder="Search for anything"
           type="text"
-        // value="Search for items"
+          // value="Search for anything"
         />
 
         <div className="searchIconDiv">

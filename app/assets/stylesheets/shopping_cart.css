@@ -3,6 +3,27 @@
   flex-direction: column;
   align-items: center;
 }
+.cart-shoppingPage{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70vw;
+}
+
+.cart-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70vw;
+}
+
+.cart-div{
+  display: flex;
+  width: 60vw;
+}
+
+
+
 
 .main-buy-div{
   display: flex;
@@ -26,13 +47,14 @@
   width: 60vw;
 }
 
-.header{
+/* .header{
   font-size: 35px;
   font-family: "Guardian-EgypTT",serif;
   font-weight: 100;
   letter-spacing: -1.5px;
   -webkit-font-smoothing: antialiased;
-}
+
+} */
 
 .cart-item-div{
   display: flex;

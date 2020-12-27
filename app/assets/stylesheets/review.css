@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 15px 0px 15px 25px;
+    padding: 15px 25px 15px 25px;
 }
 .review-title{
   font-size: 25px;
@@ -22,13 +22,14 @@
   align-items: center;
 }
 
-.body-div #textArea{
-  margin-top: 5px;
-  width: 90%;
+.body-div textarea{
+  /* margin-top: 5px; */
+  margin: 2px;
+  width: 100%;
   outline: none;
-  resize: none;
+  resize: none !important;
   height: 14vw;
-  width: 30vw;
+  width: 31vw;
   font-size: 20px;
 
 }
@@ -114,4 +115,58 @@
   font-size: large;
   color: red;
   background-color: yellow;
+}
+
+
+.review-index-div{
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+}
+
+.review-top-area{
+  display: flex;
+  /* background-color: green; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-user-name{
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+.edit-delete-buttons{
+  /* background-color: blue; */
+  display: flex;
+  justify-content: end;
+}
+
+
+
+.edit-delete-buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.review-but{ 
+  background-color: white;
+  border: 1px solid;
+  border-color: rgba(34, 34, 34, 0.15);
+  font-weight: 550;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  width: 120px;
+  height: 32px;
+  /* margin-right: 80px; */
+
+}
+
+.review-date{
+    margin-left: 15px;
+    font-size: 14px;
+    display: flex;
+    align-self: center;
 }

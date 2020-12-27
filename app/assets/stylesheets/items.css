@@ -106,17 +106,6 @@
   border-color: black;
   border-style: dashed;
 } */
-.review-but{ 
-  background-color: white;
-  border: 1px solid;
-  border-color: rgba(34, 34, 34, 0.15);
-  font-weight: 550;
-  font-size: 13px;
-  -webkit-font-smoothing: antialiased;
-  width: 120px;
-  /* margin-right: 80px; */
-
-}
 .title-show2{
   width: 95%;
   padding: 0px 0px 10px 0px;
@@ -132,10 +121,7 @@
 }
 
 .review-header{
-  /* padding-top: 10px; */
-  /* padding-bottom: 10px; */
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   flex-direction: column;
   /* background-color: red; */
@@ -150,7 +136,6 @@
 }
 
 .review-index-div{
-  /* border-bottom: 1px solid rgb(155, 151, 151); */
   padding: 15px 15px 0px 15px;
 }
 .borderLine{

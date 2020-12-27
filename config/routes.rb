@@ -5,10 +5,7 @@ Rails.application.routes.draw do
     resources :users 
     resources :categories
     resources :reviews
-    resources :cart_items, only: [:index, :show, :create, :destroy] do
-      resources :products, only: [:index]
-    end 
-
+    resources :cart_items, only: [:index, :show, :create, :update, :destroy]
     resources :products, only:[:index, :show] do 
       resources :reviews , only:[:index, :create]
       collection do

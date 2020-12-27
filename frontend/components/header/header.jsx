@@ -5,8 +5,8 @@ import { openModal } from '../../actions/modal_actions';
 import { Link } from 'react-router-dom';
 import SearchBarContainer from './search_bar_container';
 import CategoryIndexContainer from '../categories/category_index_container';
-// import CartContainer from './cart_container';
-
+import { fetchAllCartItems } from '../../actions/shopping_cart_actions';
+// import CartNumber from "../cart/cart_number";
 
 const Header = ({ user, logout, openModal}) => {
 
@@ -36,8 +36,9 @@ const Header = ({ user, logout, openModal}) => {
         </div>
         
         <div className="shopping-div">
-          {/* <CartContainer/> */}
-          <Link to="/cartItems"><i className="fa fa-shopping-cart shoppingCartIcon"></i></Link>
+
+            <Link to="/cart"><i className="fa fa-shopping-cart shoppingCartIcon"></i></Link>
+            {/* <CartNumber /> */}
         </div>
       </div>
       <div className="header-box2">
@@ -61,7 +62,8 @@ const Header = ({ user, logout, openModal}) => {
 
 const mSTP = (state) => {
   return {
-    user: state.session.user
+    user: state.session.user,
+    cartItems: Object.values(state.entities.cartItems),
   };
 };
 
@@ -70,7 +72,8 @@ const mDTP = dispatch => {
   logout: () => dispatch(logout()),
   openModal: (modal) => {
   dispatch(openModal(modal))
-  }
+},
+fetchAllCartItems: () => dispatch(fetchAllCartItems()),
 }
 };
 

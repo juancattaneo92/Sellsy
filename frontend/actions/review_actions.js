@@ -3,7 +3,7 @@ import * as ReviewAPIUtil from "../util/review_api_util";
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
-export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
+export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const CLEAR_REVIEW_ERRORS = "CLEAR_REVIEW_ERRORS";
 export const RETURN_SINGLE_REVIEW = "RETURN_SINGLE_REVIEW";
 
@@ -21,12 +21,12 @@ const receiveReview = payload => {
   })
 }
 
-const receiveReviewErrors = errors => {
-  return ({
-    type: RECEIVE_REVIEW_ERRORS,
-    errors
-  })
-}
+// const receiveErrors = errors => {
+//   return ({
+//     type: RECEIVE_ERRORS,
+//     errors
+//   })
+// }
 
 const removeReview = reviewId => {
   return ({
@@ -48,37 +48,38 @@ export const returnSingleReview = review => {
   })
 }
 
-export const requestReviews = ProductId => dispatch => {
-  return ReviewAPIUtil.fetchReviews(ProductId)
+export const requestReviews = productId => dispatch => {
+  return ReviewAPIUtil.fetchReviews(productId)
     .then(
-      (reviews) => dispatch(receiveReviews(reviews)),
-      (errors) => dispatch(receiveReviewErrors(errors.responseJSON)))
+      (reviews) => dispatch(receiveReviews(reviews)))
+      // (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
 export const requestReview = reviewId => dispatch => {
   return ReviewAPIUtil.fetchReview(reviewId)
     .then(
-      (review) => dispatch(receiveReview(review)),
-      (errors) => dispatch(receiveReviewErrors(errors.responseJSON)))
+      (review) => dispatch(receiveReview(review)))
+      // (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
 export const createReview = (productId, review) => dispatch => {
   return ReviewAPIUtil.createReview(productId, review)
     .then(
-      (reviews) => dispatch(receiveReview(reviews)),
-      (errors) => dispatch(receiveReviewErrors(errors.responseJSON)))
+      (reviews) => dispatch(receiveReview(reviews)))
+      // (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
-export const updateReview = (review) => dispatch => {
+export const editReview = (review) => dispatch => {
+  // debugger
   return ReviewAPIUtil.updateReview(review)
     .then(
-      (review) => dispatch(receiveReview(review)),
-      (errors) => dispatch(receiveReviewErrors(errors.responseJSON)))
+      (review) => dispatch(receiveReview(review)))
+      // (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
 export const deleteReview = reviewId => dispatch => {
   return ReviewAPIUtil.deleteReview(reviewId)
     .then(
-      () => dispatch(removeReview(reviewId)),
-      (errors) => dispatch(receiveReviewErrors(errors.responseJSON)))
+      () => dispatch(removeReview(reviewId)))
+      // (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }

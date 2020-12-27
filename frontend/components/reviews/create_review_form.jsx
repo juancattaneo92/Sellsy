@@ -59,9 +59,9 @@ class CreateReviewForm extends React.Component {
     )
   }
 
-  componentWillUnmount() {
-    this.props.clearReviewErrors();
-  }
+  // componentWillUnmount() {
+  //   // this.props.clearReviewErrors();
+  // }
 //Form Modal to create a Review
   render() {
     return (

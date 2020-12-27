@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { createReview, editReview, clearReviewErrors, deleteReview } from "../../actions/review_actions";
+import { createReview, clearReviewErrors, deleteReview } from "../../actions/review_actions";
 import { fetchProduct } from "../../actions/product_actions";
 import CreateReviewForm from "./create_review_form";
 import { closeModal } from '../../actions/modal_actions';
@@ -22,8 +22,7 @@ const mSTP = (state) => {
 const mDTP = dispatch => {
   return ({
     createReview: (productId, review) => dispatch(createReview(productId, review)),
-    updateReview: (review) => dispatch(updateReview(review)),
-    fetchProduct: productId => dispatch(fetchProduct(productId)),
+    // fetchProduct: productId => dispatch(fetchProduct(productId)),
     deleteReview: (review) => dispatch(deleteReview(review)),
     closeModal: () => dispatch(closeModal()),
     clearReviewErrors: () => dispatch(clearReviewErrors())

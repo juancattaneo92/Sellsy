@@ -1,30 +1,39 @@
 import React from "react";
-import { requestReview } from "../../actions/review_actions";
 
 class EditReview extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      body: this.props.reviews.body,
-      rating: this.props.reviews.rating,
-      id: this.props.reviews.id
+      body: this.props.review.body,
+      rating: this.props.review.rating,
+      id: this.props.review.id
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleInput = this.handleInput.bind(this)
   }
 
   handleSubmit(e) {
     e.preventDefault();
     let review = Object.assign({}, this.state)
     review.product_id = this.props.review.product_id
-    this.props.editReview(this.props.review.id, review)
+    // debugger
+    this.props.editReview(review)
+    .then( () => this.props.closeModal())
   }
 
   handleInput(inputType) {
     return e => this.setState({ [inputType]: e.target.value })
   }
-
+  
+  componentDidMount(){
+    // debugger
+  let pathArray = this.props.location.pathname.split("/")
+  let id = pathArray[pathArray.length -1]
+    this.props.requestReview(id)
+  }
+  
+  // componentWillUnmount() {
+  //   // this.props.clearReviewErrors();
+  // }
 
   StarRating() {
     const updateRating = (ratingValue) => {
@@ -51,9 +60,6 @@ class EditReview extends React.Component{
         })}
       </div>
     )
-  }
-  componentDidMount(){
-    this.props.requestReview(this.props.match.params.review)
   }
 
   render(){
@@ -85,7 +91,7 @@ class EditReview extends React.Component{
       </form>
 
       {/* <div className="review-errors">
-                  {this.renderErrors()}
+                  {this.clearReviewErrors()}
                 </div> */}
 
     </div>

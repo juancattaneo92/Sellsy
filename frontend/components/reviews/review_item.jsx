@@ -33,30 +33,48 @@ class ReviewItem extends React.Component {
     let date = this.props.review.updated_at.split("T")[0]
     return date;
   }
-  
 
+  
+  
   //INDIVIDUAL REVIEW:
   // Name => Date => Rating => Review Body => Buttom Delete (only for user log in) => Buttom Edit (only for user log in)
   render() {
+    
+    let buttonDelete = <div></div>;
+    let buttonEdit = <div></div>;
+
+    if (this.props.currentUser){
+      buttonDelete = this.props.userId !== parseInt(this.props.currentUser.id) ? <div></div> : <button className="review-but" onClick={this.handleDelete}>Delete</button>;
+      buttonEdit = this.props.userId !== parseInt(this.props.currentUser.id) ? <div></div> : <button className="review-but" onClick={() => this.props.openModal({ "modal-type": "edit-review", "review": this.props.review })}>Edit</button>;
+    }
   
+
     return (
+      <div>
       <div className="review-index-div">
-        <div className="user-name">
-          <div className="reviewing-user">{this.props.review.user}</div>
-          <div className="review-date">{this.currentDate()}</div>
+
+        <div className="review-top-area">
+            <div className="review-name-date-buttons">
+
+                <div className="review-user-name">
+                  <div className="review-user">{this.props.review.user}</div>
+                  <div className="review-date">{this.currentDate()}</div>
+                </div>
+            </div>
+
+                <div className="edit-delete-buttons">
+                    {buttonEdit}
+                    {buttonDelete}
+                </div>
         </div>
 
-        <div className="stars-icon-div">{this.currentStars()}</div>
+            <div className="stars-icon-div">{this.currentStars()}</div>
+            <div className="body-cont">{this.props.review.body}</div>
+     
+      </div>
 
-        <div className="body-cont">
-          <div>{this.props.review.body}</div>
-        </div>
+      <div className="borderLine"></div>
 
-        {this.props.userId === null ? null : <button className="review-button2" onClick={this.handleDelete}>Delete</button>}
-        {/* {this.props.userId === this.props.review.id.user_id ? <button className="review-button2" onClick={this.handleEdit}>Edit</button> : null} */}
-        {this.props.userId === null ? null : <button className="review-but" onClick={() => this.props.openModal("edit-review")}>Edit</button>}
-
-        <div className="borderLine"></div>
 
       </div>
     )

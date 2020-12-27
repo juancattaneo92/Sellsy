@@ -10,16 +10,6 @@ class ReviewIndex extends React.Component {
     this.props.requestReviews(this.props.product.id)
   }
 
-  reviewToggle() {
-    const reviewContainer = document.getElementById("review-index-cont").className
-    const newReviewCont = reviewContainer === "review-index-cont" ? "review-index-hide" : "review-index-cont"
-    document.getElementById("review-index-cont").className = newReviewCont
-    const oldArrow = document.getElementById("review-arrow").className
-    const newArrow = oldArrow === "fas fa-angle-up" ? "fas fa-angle-down" : "fas fa-angle-up"
-    document.getElementById("review-arrow").className = newArrow
-  }
-
-  //This Shows Title Review => buttom Create a Review => show all reviews
   render() {
     if (this.props.reviews === undefined){ 
       return null
@@ -32,8 +22,7 @@ class ReviewIndex extends React.Component {
         <div className="review-header">
             <div className="title-show2">Reviews
               <div className="review-button">
-                {this.props.userId === null ? null : <button className="review-but" onClick={() => this.props.openModal("review")}>Create a Review</button>}
-                <i onClick={this.reviewToggle}></i>
+                {this.props.userId === null ? null : <button className="review-but" onClick={() => this.props.openModal("create-review")}>Create a Review</button>}
               </div>
             </div>
             
@@ -42,11 +31,11 @@ class ReviewIndex extends React.Component {
                   <ReviewItem
                     key={review.id}
                     review={review}
-                    userId={this.props.userId}
+                    currentUser={this.props.currentUser}
+                    userId={review.user_id}
                     deleteReview={this.props.deleteReview}
                     openModal={this.props.openModal}
-                    returnSingleReview={this.props.returnSingleReview
-                    }
+                    returnSingleReview={this.props.returnSingleReview}
                   />)}
               </div>  
           </div>

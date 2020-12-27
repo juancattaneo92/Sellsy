@@ -7,11 +7,7 @@ class Product < ApplicationRecord
   
   has_many :cart_items,
   foreign_key: :product_id,  
-  class_name: :Cart
-  
-  belongs_to :user,
-  foreign_key: :user_id,
-  class_name: :User
+  class_name: :CartItem
   
   belongs_to :category,
   foreign_key: :category_id,

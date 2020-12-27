@@ -11,23 +11,41 @@ function Modal({ modal, closeModal, clearErrors}) {
   if (!modal) {
     return null;
   }
+
+  // if (Object.isObject(modal)){
+  //   modal === "edit-review"
+  // }
+  // let test2 = {};
+  // if (modal instanceof Object){
+  //   return test2;
+  // };
+
   let component;
-  switch (modal) {
-    case 'login':
-      component = <LoginFormContainer />;
-      break;
-    case 'signup':
-      component = <SignupFormContainer />;
-      break;
-    case "review":
-      component = <ReviewFormContainer />;
-      break;
-    case "edit-review":
-      component = <EditReviewFormContainer />;
-      break;
-    default:
-      return null;
+  if(modal["modal-type"] && modal["review"]){
+    let editModal = modal;
+    switch (modal) {
+      case editModal:
+        component = <EditReviewFormContainer review={modal["review"]}/>;
+        break;
+      default:
+        return null;
+    }
+  }else{
+    switch (modal) {
+      case 'login':
+        component = <LoginFormContainer />;
+        break;
+      case 'signup':
+        component = <SignupFormContainer />;
+        break;
+      case "create-review":
+        component = <ReviewFormContainer />;
+        break;
+      default:
+        return null;
+    }
   }
+  // debugger
   return (
     <div className="modal-background" onClick={closeModal} onChange={clearErrors} >
       <div className="modal-box" onClick={e => e.stopPropagation()}>
