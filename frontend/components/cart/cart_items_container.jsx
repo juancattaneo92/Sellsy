@@ -1,15 +1,16 @@
 import { connect } from 'react-redux';
-import CartItems from './cart_items';
+import CartIndex from './cart_index';
 import { fetchCartItem, fetchAllCartItems, deleteCartItem, createCartItem } from '../../actions/shopping_cart_actions';
 
-const mapStateToProps = state => {
+const mSTP = state => {
   return ({
     userCartItems: state.entities.cartItems,
     curentUserId: state.session.user.id,
+    productsArr: Object.values(state.entities.cartItems)
   })
 };
 
-const mapDispatchToProps = dispatch => {
+const mDTP = dispatch => {
   return ({
     fetchAllCartItems: () => dispatch(fetchAllCartItems()),
     fetchCartItem: cartItem => dispatch(fetchCartItem(cartItem)),
@@ -18,4 +19,4 @@ const mapDispatchToProps = dispatch => {
   })
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartItems);
+export default connect(mSTP, mDTP)(CartIndex);

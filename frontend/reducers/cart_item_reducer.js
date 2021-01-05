@@ -10,6 +10,7 @@ const cartItemReducer = (state = {}, action) => {
     case RECEIVE_CART_ITEM:
       newState[action.cartItem.id] = action.cartItem
       return newState;
+        //  return action.cartItem
     case RECEIVE_ALL_CART_ITEMS:
       // return Object.assign([], action.cartItems);
       // debugger
