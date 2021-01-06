@@ -15,7 +15,7 @@ class ProductShow extends React.Component{
       loading: true
     };
     this.addToCart = this.addToCart.bind(this);
-    this.addItem = this.addItem.bind(this);
+    this.createCart = this.createCart.bind(this);
 
 
   }
@@ -47,7 +47,7 @@ class ProductShow extends React.Component{
   }
 
 
-  addItem() {
+  createCart() {
     // debugger
     // let pathArray = this.props.location.pathname.split("/")
     // let productId = pathArray[pathArray.length - 1]
@@ -65,26 +65,32 @@ class ProductShow extends React.Component{
     e.preventDefault();
 
     if (this.props.sessionId) {
+      this.createCart();
+
       let { product, userCartItems } = this.props;
       let cartItems = Object.values(userCartItems);
       let itemsArr = [];
+      
       for (let i = 0; i < cartItems.length; i++) {
-        itemsArr.push(cartItems[i])
+        // itemsArr.push(cartItems[i])
+        if(itemsArr.includes(cartItems[i])){
+          itemsArr[cartItems[i]].quantity += 1
+        }else{
+          itemsArr.push(cartItems[i])
+        }
       }
-      if (itemsArr.includes(product)) {
-        return (
-          <div>
-            <span className=''>
-              already added to your cart
-             </span>
-          </div>
-        )
-      } else {
-        this.addItem(product);
-      }
-    } else {
-      this.props.openModal('login');
-      // <button onClick={() => dispatch(openModal('login'))}>Login</button>
+    //   if (itemsArr.includes(product)) {
+    //     return (
+    //       <div>
+    //         <span className=''>
+    //           already added to your cart
+    //          </span>
+    //       </div>
+    //     )
+    //   }
+    // } else {
+    //   this.props.openModal('login');
+    //   // <button onClick={() => dispatch(openModal('login'))}>Login</button>
     }
   }
 

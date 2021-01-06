@@ -11,16 +11,22 @@ class Api::CartItemsController < ApplicationController
     end
 
 
-        def create
+    def create
         # debugger
-        @cart_item = CartItem.create(cart_item_params)
+        # @cart_item = CartItem.create(cart_item_params)
+        if current_user.cart_items.include?(params[:cartItem])
+            current_user.cart_items[params[:id]][:quantity] += 1 
         # @cart_item.user_id = current_user.id
-        if @cart_item.save!
-            # redirect_to api_cart_items_url(@cart_item.id) 
-            render :show
-        else
-            render :json ['Error'], status: 422
+        else 
+            @cart_item = CartItem.create(cart_item_params)
+                if @cart_item.save!
+                    # redirect_to api_cart_items_url(@cart_item.id) 
+                    render :show
+                else
+                    render :json ['Error'], status: 422
+                end
         end
+
     end
     
     def update

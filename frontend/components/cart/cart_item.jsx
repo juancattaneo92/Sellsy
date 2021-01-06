@@ -5,7 +5,8 @@ class CartItem extends React.Component{
   constructor(props){
     super(props);
       this.state = {
-        quantity: this.props.counterHash[this.props.id]
+        quantity: this.props.quantity
+        // quantity: this.props.counterHash[0][0]
       } 
   }
 

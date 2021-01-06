@@ -44,14 +44,17 @@ class CartIndex extends React.Component {
     let actualItemsArr = Object.values(this.props.userCartItems);
     
     let arr = [];
-    let idArr = actualItemsArr.map( item => {
+    let idArr = actualItemsArr.forEach( item => {
       arr.push(item.id)
 
     })
-    // console.log(actualItemsArr)
+    console.log(arr)
     const reducer = (acc, e) => acc.set(e, (acc.get(e) || 0) + 1);
     let counterHash = arr.reduce(reducer, new Map())
     // console.log(arr.reduce(reducer, new Map()))
+    // console.log(counterHash) // 1: 2, 2: 1, 3: 1
+
+
 
 
     return (
