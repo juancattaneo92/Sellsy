@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CartItem from './cart_item';
+// import image from '../../../app/assets/images/payments.png';
 
 class CartIndex extends React.Component {
   constructor(props) {
@@ -55,15 +56,16 @@ class CartIndex extends React.Component {
     // console.log(counterHash) // 1: 2, 2: 1, 3: 1
 
 
-
-
     return (
 
       <div className='cart-wholePage'>
         {/* <div>{cartItemsArr2[0].main_photoUrl}</div> */}
         <div className='cart-header'>
             <h1>Shopping Cart</h1>
-            <button className='keep-shop-but'>Keep Shopping</button>
+          <div className='keep-shop-but'>
+              <Link to="/" className="keep-link" >Keep Shopping</Link>
+            </div>
+            
         </div>
 
         <div className='cart-shoppingPage'>
@@ -84,20 +86,39 @@ class CartIndex extends React.Component {
 
         <div className='checkout-div'>
           <div className='checkout-style'>
-            <div className="checkout-title">
+            <div className="checkout-title">How you'll pay</div>
+              <div className="checkout-payment">
+                <div className="checkout-pay-radio">
+                  <input type="radio" className="checkout-each-ratio" />
+                  <input type="radio" className="checkout-each-ratio" />
+                  <input type="radio" className="checkout-each-ratio" />
+                </div>
+                <div className="checkout-pay-img">
+                  <img src={window.visa} alt=""/>
+                </div>
+              </div>
 
-            </div>
             <div className='checkout-total'>
-              <span>Item(s) total <span className=''>${this.updatedSubtotal(actualItemsArr)}</span></span>
-              <div> Shipping </div> <div>Free</div>
-              <div> Total ({numItems} item(s)):</div><div className=''> ${this.updatedSubtotal(actualItemsArr)}</div>
-  
+              <div className='checkout-subtotal'>
+                  <div>Item(s) total</div>
+                  <div>${this.updatedSubtotal(actualItemsArr)}</div>
+              </div>
+              <div className='checkout-shipping'>
+                  <div>Shipping</div>
+                  <div>FREE</div>
+              </div>
+             <div className="checkout-all-total">
+                  <div>Total ({numItems} item(s)):</div>
+                  <div>${this.updatedSubtotal(actualItemsArr)}</div>
+             </div>
             </div>
-            <button className='checkout'>Proceed to checkout
+              <div className='checkout-but'>
+                <button className='checkout'>Proceed to checkout</button>
+              </div>
+              <div className="checkout-additional">Additional duties and taxes may apply</div>
                           {/* <div className=''>
                 Thank you! Your order has been received.
                           </div> */}
-            </button>
             {/* <div className='checkout'>Thank you! Your order has been received.</div> */}
           </div>
         </div>
@@ -113,10 +134,14 @@ class CartIndex extends React.Component {
 
   emptyCart() {
     return (
-      <div className=''>
-        <span className=''>Shopping Cart</span>
-        <br></br>
-        <span className=''>Your Shopping Cart is empty.</span>
+      <div className="cart-wholePage">
+        <div className="cart-shoppingPage">
+          <div className='cart-header2'>
+            <div>Shopping Cart</div>
+        
+            <div>Your Shopping Cart is empty.</div>
+          </div>
+        </div>
       </div>
     )
   }

@@ -13,6 +13,7 @@
 
     <% if current_user  %>
       <script>
+        window.visa = "<%= image_url("payments.png") %>"
         window.user = { id:"<%=current_user.id%>", fname: "<%=current_user.f_name%>"}
       </script>
       <%else  %>

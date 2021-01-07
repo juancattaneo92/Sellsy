@@ -21,7 +21,9 @@ render() {
 
           {/* IMAGE - GIFT COLUMN*/}
           <div className='cart-image-gift'>
-            <img className='cart-image' src={this.props.userCartItems[this.props.id].main_photoUrl}></img>
+          <Link className='grid-item-link' to={`/products/${this.props.userCartItems[this.props.id].id}`}>
+              <img className='cart-image' src={this.props.userCartItems[this.props.id].main_photoUrl}></img>
+            </Link>
             <label className=''>
               <input type='checkbox' className='yes-gift' /><span className='gift-text'>This order is a gift</span>
             </label> 
@@ -30,11 +32,13 @@ render() {
           <div className='cart-title-delete'>
             <div className='cart-title-div'>
             <div className='prod-title'>
-                <Link className='product-title' to={`/products/${this.props.userCartItems[this.props.id].id}`}>
-                  <span className=''>{this.props.userCartItems[this.props.id].title}</span>
+              <Link className='grid-item-link' to={`/products/${this.props.userCartItems[this.props.id].id}`}>
+                  <div className=''>{this.props.userCartItems[this.props.id].title}</div>
                 </Link>
               </div>
-              <span className='product-des'>{this.props.userCartItems[this.props.id].description}</span>
+              <Link className='grid-item-link' to={`/products/${this.props.userCartItems[this.props.id].id}`}>
+                <div className='product-des'>{this.props.userCartItems[this.props.id].description}</div>
+              </Link>
             </div>
             <div className=''> 
               <button className='cart-delete-but' onClick={() => this.props.deleteCartItem(this.props.id)}>Delete</button>
