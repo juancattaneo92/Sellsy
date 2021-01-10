@@ -12,14 +12,6 @@ function Modal({ modal, closeModal, clearErrors}) {
     return null;
   }
 
-  // if (Object.isObject(modal)){
-  //   modal === "edit-review"
-  // }
-  // let test2 = {};
-  // if (modal instanceof Object){
-  //   return test2;
-  // };
-
   let component;
   if(modal["modal-type"] && modal["review"]){
     let editModal = modal;
@@ -45,7 +37,7 @@ function Modal({ modal, closeModal, clearErrors}) {
         return null;
     }
   }
-  // debugger
+
   return (
     <div className="modal-background" onClick={closeModal} onChange={clearErrors} >
       <div className="modal-box" onClick={e => e.stopPropagation()}>

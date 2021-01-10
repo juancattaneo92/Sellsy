@@ -90,10 +90,6 @@ class EditReview extends React.Component{
         </div>
       </form>
 
-      {/* <div className="review-errors">
-                  {this.clearReviewErrors()}
-                </div> */}
-
     </div>
 
     )

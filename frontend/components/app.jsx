@@ -19,7 +19,6 @@ const App = () => (
       <Route exact path="/" component={ProductIndexContainer}/> 
       <Route exact path="/products/:productId" component={ProductShowContainer} />   
       <Route exact path='/categories/:categoryId' component={CategoryShowContainer} />
-      {/* <ProtectedRoute path="/cartItems" component={CartItemContainer} /> */}
       <Route exact path="/cart" component={CartItemsContainer} />
       <Redirect to="/"/>  
     </Switch>

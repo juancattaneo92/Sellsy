@@ -5,7 +5,6 @@ class ReviewItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
-    // this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleDelete(e) {

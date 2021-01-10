@@ -21,29 +21,3 @@ let product = props.product
 }
 
 export default ProductIndexItem;
-
-// class ProductIndexItem extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.handleClick = this.handleClick.bind(this);
-//   }
-
-//   handleClick() {
-//     this.props.history.push(`/products/${product.id}`);
-//   }
-
-//   render() {
-    
-//     return (
-//       < div className="grid-item" onClick={this.handleClick}>
-//         <li className="individual-item">
-//           <div className="image-holder">Image</div>
-//           <div className="name-holder">{this.props.product.title}</div>
-//           <div className="price-holder">${this.props.product.price}.00</div>
-//         </li>
-//     </div > 
-//     );
-//   }
-// }
-
-// export default ProductIndexItem;

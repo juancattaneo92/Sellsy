@@ -25,34 +25,22 @@ class ProductShow extends React.Component{
     .then( () => {
       this.setState({loading: false})
     })
-    // if (this.props.currentUser) {
-    //   this.props.fetchAllCartItems()
-    // }
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.match.params.productId !== prevProps.match.params.productId) {
       this.props.fetchProduct(this.props.match.params.productId)
-        // .then(() => {
-        //   this.setState({ loading: false })
-        // })
     }
 
     if (this.props.reviews.length > prevProps.reviews.length) {
       this.props.closeModal()
-        // .then(() => {
-        //   this.setState({ loading: false })
-        // })
     }
   }
 
 
   createCart() {
-    // debugger
-    // let pathArray = this.props.location.pathname.split("/")
-    // let productId = pathArray[pathArray.length - 1]
     let newItem = {
-      user_id: this.props.sessionId,
+      user_id: this.props.user.id,
       product_id: this.props.match.params.productId,
       quantity: this.state.quantity
     }
@@ -61,37 +49,10 @@ class ProductShow extends React.Component{
 
 
   addToCart(e) {
-    // debugger
     e.preventDefault();
-
-    if (this.props.sessionId) {
-      this.createCart();
-
-      let { product, userCartItems } = this.props;
-      let cartItems = Object.values(userCartItems);
-      let itemsArr = [];
-      
-      for (let i = 0; i < cartItems.length; i++) {
-        // itemsArr.push(cartItems[i])
-        if(itemsArr.includes(cartItems[i])){
-          itemsArr[cartItems[i]].quantity += 1
-        }else{
-          itemsArr.push(cartItems[i])
-        }
-      }
-    //   if (itemsArr.includes(product)) {
-    //     return (
-    //       <div>
-    //         <span className=''>
-    //           already added to your cart
-    //          </span>
-    //       </div>
-    //     )
-    //   }
-    // } else {
-    //   this.props.openModal('login');
-    //   // <button onClick={() => dispatch(openModal('login'))}>Login</button>
-    }
+    if (this.props.user.id) {
+      this.createCart(); 
+   }
   }
 
 
@@ -122,7 +83,7 @@ class ProductShow extends React.Component{
               productId={this.props.product.id}
               requestReviews={this.props.requestReviews}
               openModal={this.props.openModal}
-              userId={this.props.userId}
+              userId={this.props.user.id}
             />  
           </div>      
       </div>

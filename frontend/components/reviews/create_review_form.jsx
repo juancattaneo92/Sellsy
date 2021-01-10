@@ -22,16 +22,6 @@ class CreateReviewForm extends React.Component {
     return e => this.setState({ [inputType]: e.target.value })
   }
 
-  // renderErrors() {
-  //   return (
-  //     <ul>
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={`error-${i}`}>{error}</li>
-  //       ))}
-  //     </ul>
-  //   )
-  // }
-
   StarRating() {
     const updateRating = (ratingValue) => {
     this.setState({ rating: ratingValue })
@@ -59,10 +49,6 @@ class CreateReviewForm extends React.Component {
     )
   }
 
-  // componentWillUnmount() {
-  //   // this.props.clearReviewErrors();
-  // }
-//Form Modal to create a Review
   render() {
     return (
       <div className="review-form-div">
@@ -87,10 +73,6 @@ class CreateReviewForm extends React.Component {
                 <button>Submit Review</button>
                 </div>
         </form>
-
-                {/* <div className="review-errors">
-                  {this.renderErrors()}
-                </div> */}
 
       </div>
     )

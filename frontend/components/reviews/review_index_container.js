@@ -15,7 +15,6 @@ const mDTP = dispatch => {
     deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
     returnSingleReview: review => dispatch(returnSingleReview(review)),
     openModal: (payload) => {
-      // debugger
       dispatch(openModal(payload))
     }
   })

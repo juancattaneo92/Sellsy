@@ -31,9 +31,6 @@ class SignupForm extends React.Component {
     );
   }
 
-  //  <h2 className="login-message">{this.props.formType}</h2>
-  // <h2 className="button-change-session">{this.props.otherForm}</h2>
-
   render() {
     return (
       <div>
