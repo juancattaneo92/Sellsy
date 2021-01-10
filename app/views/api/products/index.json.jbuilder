@@ -1,6 +1,7 @@
 @products.each do |product|
   json.set! product.id do
     json.partial! 'product', product: product
+    # json.extract! product.cart_items :quantity
       if product.main_photo.attached?
         json.main_photoUrl url_for(product.main_photo)
       else
