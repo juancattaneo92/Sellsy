@@ -10,7 +10,7 @@ const mSTP = (state, ownProps) => {
   return {
    product: state.entities.products[ownProps.match.params.productId],
    reviews: Object.values(state.entities.reviews),
-   user: state.session.user,
+   user: state.session.currentUser,
    cartItems: Object.values(state.entities.cartItems),
    userCartItems: state.entities.cartItems,
   };

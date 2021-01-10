@@ -22,7 +22,7 @@ class ReviewIndex extends React.Component {
         <div className="review-header">
             <div className="title-show2">Reviews
               <div className="review-button">
-                {this.props.userId === null ? null : <button className="review-but" onClick={() => this.props.openModal("create-review")}>Create a Review</button>}
+                {this.props.currentUser === null ? null : <button className="review-but" onClick={() => this.props.openModal("create-review")}>Create a Review</button>}
               </div>
             </div>
             

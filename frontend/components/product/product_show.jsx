@@ -22,6 +22,7 @@ class ProductShow extends React.Component{
 
   componentDidMount(){
     this.props.fetchProduct(this.props.match.params.productId)
+    this.props.requestReviews(this.props.match.params.productId)
     .then( () => {
       this.setState({loading: false})
     })
@@ -57,9 +58,32 @@ class ProductShow extends React.Component{
 
 
   render(){
-    if (this.state.loading){
+    if (this.state.loading || !this.props.product || !this.props.reviews){
       return <div></div>
     }
+    let reviewsIndexComponent = <div></div>;
+
+    if (this.props.user){
+      reviewsIndexComponent = 
+      <ReviewIndexContainer
+        reviews={this.props.reviews}
+        product={this.props.product}
+        productId={this.props.product.id}
+        requestReviews={this.props.requestReviews}
+        openModal={this.props.openModal}
+        userId={this.props.user.id}
+      />  
+    }else if(!this.props.user){
+      reviewsIndexComponent =
+        <ReviewIndexContainer
+          reviews={this.props.reviews}
+          product={this.props.product}
+          productId={this.props.product.id}
+          requestReviews={this.props.requestReviews}
+          openModal={this.props.openModal}
+        />  
+    }
+
     return(
     <div className="whole-showpage">
       <div className="show-main">
@@ -77,14 +101,15 @@ class ProductShow extends React.Component{
         </div>
 
           <div className="child-comments">
-            <ReviewIndexContainer
+            {reviewsIndexComponent}
+            {/* <ReviewIndexContainer
               reviews={this.props.reviews}
               product={this.props.product}
               productId={this.props.product.id}
               requestReviews={this.props.requestReviews}
               openModal={this.props.openModal}
               userId={this.props.user.id}
-            />  
+            />   */}
           </div>      
       </div>
     </div>
