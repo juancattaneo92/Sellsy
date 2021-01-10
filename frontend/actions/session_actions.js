@@ -23,8 +23,6 @@ export const logoutCurrentUser = () => {
   type: LOGOUT_CURRENT_USER,
 }};
 
-//thunk action creator
-
 export const signup = (user) => dispatch => {
   return SessionAPIUtil.signup(user).then(
     user => dispatch(receiveCurrentUser(user)), 
