@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CartItem from './cart_item';
 // import image from '../../../app/assets/images/payments.png';
+//testing
 
 class CartIndex extends React.Component {
   constructor(props) {
