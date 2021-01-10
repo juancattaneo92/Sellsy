@@ -26,7 +26,6 @@ class Api::CartItemsController < ApplicationController
         end
         @cart_item = CartItem.create(cart_item_params)
             if @cart_item.save!
-                # redirect_to api_cart_items_url(@cart_item.id) 
                 render :show
             else
                 render :json ['Error'], status: 422
