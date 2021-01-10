@@ -4,25 +4,30 @@ import { Link } from 'react-router-dom';
 class CartItem extends React.Component{
   constructor(props){
     super(props);
-      this.state = {
-        quantity: this.props.quantity
-        // quantity: this.props.counterHash[0][0]
-      } 
+    this.product = this.props.userCartItems[this.props.cartItemId];
+    this.state = {
+              id: this.product.id,
+              user_id: this.product.user_id,
+              product_id: this.product.product_id,
+              quantity: this.product.quantity,
+
+    }
+    this.handleUpdateQuantity = this.handleUpdateQuantity.bind(this);
   }
 
-
+  handleUpdateQuantity(e){
+    e.preventDefault()
+    this.setState({ quantity: e.target.value });
+    this.props.updateCartItem(this.state)
+  }
 
 render() {
-
     return (
-
       <div className='cart-product'>
-          {/* {console.log(this.props.userCartItems[cartItemId].id)} */}
-
           {/* IMAGE - GIFT COLUMN*/}
           <div className='cart-image-gift'>
-          <Link className='grid-item-link' to={`/products/${this.props.userCartItems[this.props.id].id}`}>
-              <img className='cart-image' src={this.props.userCartItems[this.props.id].main_photoUrl}></img>
+          <Link className='grid-item-link' to={`/products/${this.props.userCartItems[this.props.cartItemId].id}`}>
+              <img className='cart-image' src={this.props.userCartItems[this.props.cartItemId].main_photoUrl}></img>
             </Link>
             <label className=''>
               <input type='checkbox' className='yes-gift' /><span className='gift-text'>This order is a gift</span>
@@ -32,36 +37,37 @@ render() {
           <div className='cart-title-delete'>
             <div className='cart-title-div'>
             <div className='prod-title'>
-              <Link className='grid-item-link' to={`/products/${this.props.userCartItems[this.props.id].id}`}>
-                  <div className=''>{this.props.userCartItems[this.props.id].title}</div>
+              <Link className='grid-item-link' to={`/products/${this.props.userCartItems[this.props.cartItemId].id}`}>
+                  <div className=''>{this.props.userCartItems[this.props.cartItemId].title}</div>
                 </Link>
               </div>
-              <Link className='grid-item-link' to={`/products/${this.props.userCartItems[this.props.id].id}`}>
-                <div className='product-des'>{this.props.userCartItems[this.props.id].description}</div>
+              <Link className='grid-item-link' to={`/products/${this.props.userCartItems[this.props.cartItemId].id}`}>
+                <div className='product-des'>{this.props.userCartItems[this.props.cartItemId].description}</div>
               </Link>
             </div>
             <div className=''> 
-              <button className='cart-delete-but' onClick={() => this.props.deleteCartItem(this.props.id)}>Delete</button>
+              <button className='cart-delete-but' onClick={() => this.props.deleteCartItem(this.props.cartItemId)}>Delete</button>
             </div>
           </div>
           {/* QUANTITY COLUMN*/}
           <div className='cart-qty'>
-            <select className='quantity-cart' value='Qty:'>
+            {/* <select className='quantity-cart' value='Qty:'> */}
+          <select className='quantity-cart' value={this.state.quantity} onChange={this.handleUpdateQuantity}>
               <option value='1'>Qty: 1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-              <option value='6'>6</option>
-              <option value='7'>7</option>
-              <option value='8'>8</option>
-              <option value='9'>9</option>
-              <option value='10'>10</option>
+              <option value='2'>Qty: 2</option>
+              <option value='3'>Qty: 3</option>
+              <option value='4'>Qty: 4</option>
+              <option value='5'>Qty: 5</option>
+              <option value='6'>Qty: 6</option>
+              <option value='7'>Qty: 7</option>
+              <option value='8'>Qty: 8</option>
+              <option value='9'>Qty: 9</option>
+              <option value='10'>Qty: 10</option>
             </select>
           </div>
           {/* PRICE COLUMN*/}
           <div className='cart-price'>
-            <div className=''>${(Math.round(this.props.userCartItems[this.props.id].price * 100) / 100).toFixed(2)}</div>
+          <div className=''>${(Math.round(this.props.userCartItems[this.props.cartItemId].price * 100) / 100).toFixed(2) * (this.props.userCartItems[this.props.cartItemId].quantity) }</div>
             {/* <br/> */}
             <div className=''>Shipping: FREE</div>
           </div>

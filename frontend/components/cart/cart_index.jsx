@@ -17,11 +17,18 @@ class CartIndex extends React.Component {
   }
 
   updatedSubtotal(arr) {
+    let actualItemsArr = Object.values(this.props.userCartItems);
+    let numberItems = [];
+    actualItemsArr.map(item => {
+      numberItems.push(item.quantity)
+    })
+    let totalAmountItems = numberItems.reduce((a, b) => a + b)
+
     let newArr = [];
     arr.forEach(item => newArr.push(item.price));
     let total = newArr.reduce((a, b) => a + b, 0);
     return (
-      (Math.round(total * 100) / 100).toFixed(2)
+      (Math.round(total * 100) / 100).toFixed(2) * (totalAmountItems)
     )
   }
 
@@ -41,25 +48,20 @@ class CartIndex extends React.Component {
   filledCart() {
     // debugger
     let numItems = Object.values(this.props.userCartItems).length;
+    let numberItems = [];
     let cartItemsArr = Object.keys(this.props.userCartItems);
     let actualItemsArr = Object.values(this.props.userCartItems);
-    
-    let arr = [];
-    let idArr = actualItemsArr.forEach( item => {
-      arr.push(item.id)
-
+    actualItemsArr.map(item => {
+        numberItems.push(item.quantity)
     })
-    console.log(arr)
-    const reducer = (acc, e) => acc.set(e, (acc.get(e) || 0) + 1);
-    let counterHash = arr.reduce(reducer, new Map())
-    // console.log(arr.reduce(reducer, new Map()))
-    // console.log(counterHash) // 1: 2, 2: 1, 3: 1
+    let totalAmountItems = numberItems.reduce( (a, b) => a + b)
+
+    
 
 
     return (
 
       <div className='cart-wholePage'>
-        {/* <div>{cartItemsArr2[0].main_photoUrl}</div> */}
         <div className='cart-header'>
             <h1>Shopping Cart</h1>
           <div className='keep-shop-but'>
@@ -76,9 +78,8 @@ class CartIndex extends React.Component {
                   key = {cartItemId}
                   userCartItems = {this.props.userCartItems}
                   deleteCartItem = {this.props.deleteCartItem}
-                  id = {cartItemId}
-                  counterHash = {counterHash}/>
-                // <li className='' key={cartItemId}> // now is id
+                  updateCartItem = {this.props.updateCartItem}
+                  cartItemId = {cartItemId}/>
               
               ))}
 
@@ -108,7 +109,7 @@ class CartIndex extends React.Component {
                   <div>FREE</div>
               </div>
              <div className="checkout-all-total">
-                  <div>Total ({numItems} item(s)):</div>
+                  <div>Total ({totalAmountItems} item(s)):</div>
                   <div>${this.updatedSubtotal(actualItemsArr)}</div>
              </div>
             </div>
@@ -124,9 +125,6 @@ class CartIndex extends React.Component {
         </div>
 
         </div>
-
-
-
 
       </div>
     )
@@ -155,6 +153,3 @@ class CartIndex extends React.Component {
 
 export default CartIndex;
 
-//
-
-// this.props.userCartItems[cartItemId].id = [1, 2, 3, 4]
