@@ -1,5 +1,4 @@
 class Api::CartItemsController < ApplicationController
-    
 
     def index 
         @cart_items = current_user.cart_items
@@ -12,27 +11,33 @@ class Api::CartItemsController < ApplicationController
 
 
     def create
-        # debugger
+        
+        # Query database, see if cart item already exists 
         # @cart_item = CartItem.create(cart_item_params)
-        if current_user.cart_items.include?(params[:cartItem])
-            current_user.cart_items[params[:id]][:quantity] += 1 
-        # @cart_item.user_id = current_user.id
-        else 
-            @cart_item = CartItem.create(cart_item_params)
-                if @cart_item.save!
-                    # redirect_to api_cart_items_url(@cart_item.id) 
-                    render :show
-                else
-                    render :json ['Error'], status: 422
-                end
+        current_user.cart_items.each do |cartItem|
+            # debugger
+            if cartItem.product_id == (params[:cartItem][:product_id]).to_i
+                cartItem.quantity += 1
+                cartItem.save!
+                @cart_item = cartItem
+                render :show
+                return
+            end
         end
-
+        @cart_item = CartItem.create(cart_item_params)
+            if @cart_item.save!
+                # redirect_to api_cart_items_url(@cart_item.id) 
+                render :show
+            else
+                render :json ['Error'], status: 422
+            end
     end
     
     def update
+        # debugger
+
         @cart_item = CartItem.find(params[:id])
         if @cart_item.update(cart_item_params)
-            # @cart_items = CartItem.where(cart_id: current_user.cart.id)
             render :index
         else 
             render json: @cart_item.errors.full_messages, status: 401
@@ -59,6 +64,6 @@ class Api::CartItemsController < ApplicationController
 
     private
     def cart_item_params
-        params.require(:cartItem).permit(:product_id, :user_id, :quantity)
+        params.require(:cartItem).permit(:id, :product_id, :user_id, :quantity)
     end
 end
