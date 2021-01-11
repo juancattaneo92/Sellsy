@@ -4,7 +4,7 @@ import ReviewIndexContainer from "../reviews/review_index_container";
 import AverageRatingContainer from "../reviews/average_rating_container";
 import PhotoShowMain from "../product/photos_show_main";
 import { fetchProducts, fetchProduct } from '../../actions/product_actions';
-import { openModal } from "../../actions/modal_actions";
+// import { openModal } from "../../actions/modal_actions";
 
 
 class ProductShow extends React.Component{
@@ -51,10 +51,16 @@ class ProductShow extends React.Component{
 
   addToCart(e) {
     e.preventDefault();
-    if (this.props.user.id) {
-      this.createCart(); 
+    // debugger
+    if (!this.props.user) {
+      // debugger
+      this.props.openModal("login")
+   }else {
+      this.createCart()
    }
   }
+
+  //  { this.props.currentUser === null ? null : <button className="review-but" onClick={() => this.props.openModal("create-review")}>Create a Review</button> }
 
 
   render(){
