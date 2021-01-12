@@ -26,7 +26,7 @@
 .cart-shoppingPage{
   display: flex;
   /* flex-direction: row; */
-  align-items: flex-start;
+  align-items: end;
   width: 75vw;
 }
 
@@ -52,7 +52,7 @@
 }
 .cart-cont{
   display: flex;
-  width: 52vw;
+  width: 54vw;
   flex-direction: column;
   font-weight: 200;
 }
@@ -264,7 +264,7 @@ input[type='radio']:checked:after {
 .cart-price{
     font-size: 17px;
     // float: left;
-    width: 7vw;
+    // width: 7vw;
     text-align: right;
     margin-top: 1.5%;
     font-weight: 400;
