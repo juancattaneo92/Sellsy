@@ -7,7 +7,7 @@ import { requestReviews } from "../../actions/review_actions";
 const mSTP = (state) => {
   return {
     products: Object.values(state.entities.products),
-    user: state.session.user,
+    user: state.session.currentUser,
     reviews: Object.values(state.entities.reviews)
   };
 };

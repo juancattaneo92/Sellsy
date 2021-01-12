@@ -12,7 +12,7 @@ const mSTP = (state) => {
     //   rating: 0,
     //   formType: 'Create Review'
     // },
-    userId: state.session.user.id,
+    userId: state.session.currentUser.id,
     errors: state.errors.reviewErrors,
     productId: Object.keys(state.entities.products)[0]
 

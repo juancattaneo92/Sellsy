@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import SearchBarContainer from './search_bar_container';
 import CategoryIndexContainer from '../categories/category_index_container';
 import { fetchAllCartItems } from '../../actions/shopping_cart_actions';
+
 
 const Header = ({ user, logout, openModal}) => {
 
@@ -21,6 +22,9 @@ const Header = ({ user, logout, openModal}) => {
       </div>
     </div>
   );
+  // let cartLink = <Link to="/cart"><i className="fa fa-shopping-cart shoppingCartIcon"></i></Link>
+  // const [ currentUser, setCurrentUser] = useState( false )
+
 
   return (
     <div className="header-main">
@@ -35,8 +39,9 @@ const Header = ({ user, logout, openModal}) => {
         </div>
         
         <div className="shopping-div">
-
-            <Link to="/cart"><i className="fa fa-shopping-cart shoppingCartIcon"></i></Link>
+          {/* {cartLink} */}
+          {user ? <Link to="/cart"><i className="fa fa-shopping-cart shoppingCartIcon"></i></Link> : <div></div> }
+            {/* <Link to="/cart"><i className="fa fa-shopping-cart shoppingCartIcon"></i></Link> */}
         </div>
       </div>
       <div className="header-box2">
@@ -60,7 +65,7 @@ const Header = ({ user, logout, openModal}) => {
 
 const mSTP = (state) => {
   return {
-    user: state.session.user,
+    user: state.session.currentUser,
     cartItems: Object.values(state.entities.cartItems),
   };
 };

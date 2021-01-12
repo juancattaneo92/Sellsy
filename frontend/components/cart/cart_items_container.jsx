@@ -6,7 +6,7 @@ import { updateCartItem } from '../../actions/shopping_cart_actions';
 const mSTP = state => {
   return ({
     userCartItems: state.entities.cartItems,
-    curentUserId: state.session.user.id,
+    curentUserId: state.session.currentUser.id,
     productsArr: Object.values(state.entities.cartItems)
   })
 };
