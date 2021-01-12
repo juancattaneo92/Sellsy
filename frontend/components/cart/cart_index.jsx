@@ -14,23 +14,20 @@ class CartIndex extends React.Component {
 
     this.emptyCart = this.emptyCart.bind(this);
     this.filledCart = this.filledCart.bind(this);
-    this.updatedSubtotal = this.updatedSubtotal.bind(this);
+    this.updatedtotal = this.updatedtotal.bind(this);
   }
 
-  updatedSubtotal(arr) {
+  updatedtotal() {
     let actualItemsArr = Object.values(this.props.userCartItems);
-    let numberItems = [];
-    actualItemsArr.map(item => {
-      numberItems.push(item.quantity)
+    let subtotal = [];
+    actualItemsArr.forEach( item => {
+      subtotal.push(item.quantity * item.price)
     })
-    let totalAmountItems = numberItems.reduce((a, b) => a + b)
-
-    let newArr = [];
-    arr.forEach(item => newArr.push(item.price));
-    let total = newArr.reduce((a, b) => a + b, 0);
+    let allSubtotal = [];
     return (
-      (Math.round(total * 100) / 100).toFixed(2) * (totalAmountItems)
+      allSubtotal = subtotal.reduce((a, b) => a + b)
     )
+
   }
 
   componentDidMount() {
@@ -48,17 +45,15 @@ class CartIndex extends React.Component {
 
   filledCart() {
     // debugger
-    let numItems = Object.values(this.props.userCartItems).length;
-    let numberItems = [];
+    // let numItems = Object.values(this.props.userCartItems).length;
+ 
     let cartItemsArr = Object.keys(this.props.userCartItems);
+    let numberItems = [];
     let actualItemsArr = Object.values(this.props.userCartItems);
     actualItemsArr.map(item => {
         numberItems.push(item.quantity)
     })
     let totalAmountItems = numberItems.reduce( (a, b) => a + b)
-
-    
-
 
     return (
 
@@ -103,7 +98,7 @@ class CartIndex extends React.Component {
             <div className='checkout-total'>
               <div className='checkout-subtotal'>
                   <div>Item(s) total</div>
-                  <div>${this.updatedSubtotal(actualItemsArr)}</div>
+                  <div>${this.updatedtotal()}</div>
               </div>
               <div className='checkout-shipping'>
                   <div>Shipping</div>
@@ -111,7 +106,7 @@ class CartIndex extends React.Component {
               </div>
              <div className="checkout-all-total">
                   <div>Total ({totalAmountItems} item(s)):</div>
-                  <div>${this.updatedSubtotal(actualItemsArr)}</div>
+                  <div>${this.updatedtotal()}</div>
              </div>
             </div>
               <div className='checkout-but'>

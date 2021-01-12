@@ -22,6 +22,7 @@ class CartItem extends React.Component{
   }
 
 render() {
+  let subtotal = (Math.round(this.props.userCartItems[this.props.cartItemId].price * 100) / 100).toFixed(2) * (this.props.userCartItems[this.props.cartItemId].quantity)
     return (
       <div className='cart-product'>
           {/* IMAGE - GIFT COLUMN*/}
@@ -67,7 +68,7 @@ render() {
           </div>
           {/* PRICE COLUMN*/}
           <div className='cart-price'>
-          <div className=''>${(Math.round(this.props.userCartItems[this.props.cartItemId].price * 100) / 100).toFixed(2) * (this.props.userCartItems[this.props.cartItemId].quantity) }</div>
+          <div className=''>${subtotal}</div>
             {/* <br/> */}
             <div className=''>Shipping: FREE</div>
           </div>
