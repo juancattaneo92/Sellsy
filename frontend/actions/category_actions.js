@@ -1,17 +1,17 @@
-import * as CategoryApiUtil from "../util/category_api_util";
+// import * as CategoryApiUtil from "../util/category_api_util";
 
-export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES';
+export const RECEIVE_CATEGORY = 'RECEIVE_CATEGORY';
 
 
-export const receiveCategories = (categories) => {
+export const receiveCategory = (category) => {
   return ({
-    type: RECEIVE_CATEGORIES,
-    categories
+    type: RECEIVE_CATEGORY,
+    category
   })
 };
 
-export const fetchCategories = () => dispatch => {
-  return CategoryApiUtil.fetchCategories().then(
-    categories => dispatch(receiveCategories(categories)))
-  };
+// export const fetchCategories = () => dispatch => {
+//   return CategoryApiUtil.fetchCategories().then(
+//     categories => dispatch(receiveCategories(categories)))
+//   };
 

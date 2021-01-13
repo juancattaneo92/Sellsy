@@ -1,13 +1,14 @@
-import { RECEIVE_CATEGORIES } from "../actions/category_actions";
+import { RECEIVE_CATEGORY } from "../actions/category_actions";
 
 const categoryReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_CATEGORIES:
-      return action.categories;
+    case RECEIVE_CATEGORY:
+      return action.category;
     default:
       return state;
   }
 };
 
 export default categoryReducer;
+

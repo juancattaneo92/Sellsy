@@ -1,8 +1,8 @@
 class Category < ApplicationRecord
-    validates :name, presence: true
+    # validates :name, presence: true
 
-    has_many :products,
-    foreign_key: :category_id,
-    class_name: :Product
+    # has_many :products,
+    # foreign_key: :category_id,
+    # class_name: :Product
     
 end

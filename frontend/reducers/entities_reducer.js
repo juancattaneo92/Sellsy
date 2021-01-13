@@ -9,7 +9,7 @@ const entitiesReducer = combineReducers({
   user: usersReducer,
   products: productsReducer,
   reviews: reviewsReducer,
-  categories: categoryReducer,
+  category: categoryReducer,
   cartItems: cartItemReducer,
 });
 

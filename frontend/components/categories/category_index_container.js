@@ -1,17 +1,17 @@
 import { connect } from 'react-redux'
-import { fetchCategories } from "../../actions/categories_actions";
+import { receiveCategory } from "../../actions/category_actions";
 import CategoryIndex from "./category_index";
 
 
 
 const mSTP = (state) => {
   return {
-    allCategories: Object.values(state.entities.categories)
+    category: state.entities.category
   }
 };
 
 const mDTP = (dispatch) => ({
-  fetchCategories: () => dispatch(fetchCategories())
+  receiveCategory: (category) => dispatch(receiveCategory(category))
 });
 
 export default connect(mSTP, mDTP)(CategoryIndex);

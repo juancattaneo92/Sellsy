@@ -8,7 +8,8 @@ const mSTP = (state) => {
   return {
     products: Object.values(state.entities.products),
     user: state.session.currentUser,
-    reviews: Object.values(state.entities.reviews)
+    reviews: Object.values(state.entities.reviews),
+    category: state.entities.category
   };
 };
 

@@ -5,8 +5,8 @@ class Api::CategoriesController < ApplicationController
     #     render :show
     # end
 
-    def index
-        @categories = Category.all 
-        render :index
-    end
+    # def index
+    #     @categories = Category.all 
+    #     render :index
+    # end
 end

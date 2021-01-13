@@ -45,9 +45,9 @@ const Header = ({ user, logout, openModal}) => {
         </div>
       </div>
       <div className="header-box2">
-        <div className="header-categories">
+        {/* <div className="header-categories"> */}
           <CategoryIndexContainer />
-          <div className="catergory1">Holiday Shop</div>
+          {/* <div className="catergory1">Holiday Shop</div>
           <div className="catergory2">Jewelry & Accessories</div>
           <div className="catergory3">Clothing & Shoes</div>
           <div className="catergory4">Home & Living</div>
@@ -55,8 +55,8 @@ const Header = ({ user, logout, openModal}) => {
           <div className="catergory6">Toys & Entertainment</div>
           <div className="catergory7">Art & Collectibles</div>
           <div className="catergory8">Craft Supplies</div>
-          <div className="catergory9"><i className="fa fa-gift"></i>Gifts</div>
-        </div>
+          <div className="catergory9"><i className="fa fa-gift"></i>Gifts</div> */}
+        {/* </div> */}
       </div>
     </div>
   );

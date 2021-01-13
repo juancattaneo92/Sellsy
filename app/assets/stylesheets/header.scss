@@ -187,7 +187,13 @@
   flex-direction: row;
   font-weight: 300;
   font-size: 13px;
+  text-decoration: none;
+  color: grey;
 }
 .header-categories:hover{
   cursor: pointer;
+}
+.category:Link{
+  text-decoration: none;
+  color: grey;
 }
