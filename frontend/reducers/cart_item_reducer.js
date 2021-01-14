@@ -14,10 +14,11 @@ const cartItemReducer = (state = {}, action) => {
     case RECEIVE_ALL_CART_ITEMS:
       return action.cartItems;
     case DELETE_CART_ITEM:
-      delete newState[action.cartItem.id];
+      // debugger
+      delete newState[action.cartItem];
       return newState;
-    case DELETE_ALL_CART_ITEMS:
-      return action.cartItems
+    // case DELETE_ALL_CART_ITEMS:
+    //   return action.cartItems
     default:
       return state
   }

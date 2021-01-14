@@ -3,7 +3,7 @@ import * as CartItemApiUtil from "../util/shopping_cart_util";
 export const RECEIVE_CART_ITEM = 'RECEIVE_CART_ITEM';
 export const RECEIVE_ALL_CART_ITEMS = "RECEIVE_ALL_CART_ITEMS";
 export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
-export const DELETE_ALL_CART_ITEMS = "DELETE_ALL_CART_ITEMS";
+// export const DELETE_ALL_CART_ITEMS = "DELETE_ALL_CART_ITEMS";
 
 const receiveCartItem = cartItem => {
   return {
@@ -26,12 +26,12 @@ const destroyCartItem = (cartItem) => {
   })
 }
 
-const deleteCartItems = (cartItems) => {
-  return ({
-    type: DELETE_ALL_CART_ITEMS,
-    cartItems
-  })
-}
+// const deleteCartItems = (cartItems) => {
+//   return ({
+//     type: DELETE_ALL_CART_ITEMS,
+//     cartItems
+//   })
+// }
 
 export const fetchCartItem = (cartItemId) => dispatch => {
   return CartItemAPIUtil.fetchCartItem(cartItemId)
@@ -55,11 +55,12 @@ export const updateCartItem = (cartItem) => (dispatch) => {
 }
 
 export const deleteCartItem = (cartItemId) => (dispatch) => {
+  // debugger
   return CartItemApiUtil.deleteCartItem(cartItemId)
-    .then(cartItem => dispatch(destroyCartItem(cartItem)))
+    .then( () => dispatch(destroyCartItem(cartItemId)))
 }
 
-export const deleteAllCartItems = () => (dispatch) => {
-  return CartItemApiUtil.deleteAllCartItems()
-    .then((cartItems) => dispatch(deleteCartItems(cartItems)))
-};
+// export const deleteAllCartItems = () => (dispatch) => {
+//   return CartItemApiUtil.deleteAllCartItems()
+//     .then((cartItems) => dispatch(deleteCartItems(cartItems)))
+// };

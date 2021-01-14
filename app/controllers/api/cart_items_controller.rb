@@ -44,12 +44,14 @@ class Api::CartItemsController < ApplicationController
     end
     
     def destroy
+        # debugger
         @cart_item = CartItem.find(params[:id])
         @cart_item.destroy
         render :show
     end
 
-    #     def destroy
+    # def destroy
+    #         debugger
     #     @cart_item = CartItem.find(params[:id])
     #     @cart_item.destroy 
     #     render :show

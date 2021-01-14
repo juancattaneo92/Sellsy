@@ -9,10 +9,10 @@ class CartItem extends React.Component{
               id: this.props.cartItemId,
               user_id: this.product.user_id,
               product_id: this.product.product_id,
-              quantity: this.product.quantity,
-
+              quantity: this.product.quantity, 
     }
     this.handleUpdateQuantity = this.handleUpdateQuantity.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleUpdateQuantity(e){
@@ -23,7 +23,14 @@ class CartItem extends React.Component{
     this.props.updateCartItem(updatedItem)
   }
 
+  handleDelete(e){
+    // debugger
+    // e.preventDefault();
+    this.props.deleteCartItem(this.props.cartItemId)
+  }
+
 render() {
+  // debugger
   let subtotal = (Math.round(this.props.userCartItems[this.props.cartItemId].price * 100) / 100).toFixed(2) * (this.props.userCartItems[this.props.cartItemId].quantity)
     return (
       <div className='cart-product'>
@@ -49,7 +56,7 @@ render() {
               </Link>
             </div>
             <div className=''> 
-              <button className='cart-delete-but' onClick={() => this.props.deleteCartItem(this.props.cartItemId)}>Delete</button>
+            <button className='cart-delete-but' onClick={() => this.handleDelete() }>Delete</button>
             </div>
           </div>
           {/* QUANTITY COLUMN*/}

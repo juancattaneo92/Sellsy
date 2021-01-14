@@ -35,9 +35,9 @@ export const deleteCartItem = (cartItemId) => {
   })
 }
 
-export const deleteAllCartItems = () => {
-  return $.ajax({
-    method: 'DELETE',
-    url: "api/cart_items"
-  })
-}
+// export const deleteAllCartItems = () => {
+//   return $.ajax({
+//     method: 'DELETE',
+//     url: "api/cart_items"
+//   })
+// }

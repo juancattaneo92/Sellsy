@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import CartIndex from './cart_index';
-import { fetchCartItem, fetchAllCartItems, deleteCartItem, createCartItem } from '../../actions/shopping_cart_actions';
-import { updateCartItem } from '../../actions/shopping_cart_actions';
+import { fetchCartItem, fetchAllCartItems, deleteCartItem, createCartItem, updateCartItem } from '../../actions/shopping_cart_actions';
 
 const mSTP = state => {
   return ({
