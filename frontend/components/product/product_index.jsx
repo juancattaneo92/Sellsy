@@ -28,11 +28,9 @@ class ProductIndex extends React.Component{
 
   productsByCategory() {
     let category = this.props.match.path.split("/")[1]
-    // debugger
     let filteredProducts = this.props.products.filter(product =>
       product.category === category
       )
-      // console.log(filteredProducts)
     return (
       <div>
         <div>

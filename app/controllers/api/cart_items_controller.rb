@@ -11,9 +11,7 @@ class Api::CartItemsController < ApplicationController
 
 
     def create
-        
-        # Query database, see if cart item already exists 
-        # @cart_item = CartItem.create(cart_item_params)
+
         current_user.cart_items.each do |cartItem|
             # debugger
             if cartItem.product_id == (params[:cartItem][:product_id]).to_i
@@ -50,18 +48,6 @@ class Api::CartItemsController < ApplicationController
         render :show
     end
 
-    # def destroy
-    #         debugger
-    #     @cart_item = CartItem.find(params[:id])
-    #     @cart_item.destroy 
-    #     render :show
-    # end
-
-    # def destroy_all
-    #     @cart_items = CartItem.where(cart_id: current_user.cart.id)
-    #     @cart_items.destroy_all
-    #     render :index
-    # end
 
     private
     def cart_item_params

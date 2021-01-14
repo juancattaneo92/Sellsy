@@ -9,10 +9,6 @@ class Product < ApplicationRecord
   foreign_key: :product_id,  
   class_name: :CartItem
   
-  # belongs_to :category,
-  # foreign_key: :category_id,
-  # class_name: :Category
-
   has_one_attached :main_photo
   has_many_attached :photos
   
