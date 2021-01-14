@@ -13,31 +13,40 @@
 } 
 .container-main{
   display: flex;
-  justify-content: center;
+  // justify-content: center;
+  // width: 75vw;
+  // background-color: black;
+  margin: 0vw 2vw 0vw 13vw;
+
 }
 .container-items{
-  width: 75vw;
+  // width: 75vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-items: flex-start;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  // background-color: yellow;
+  // justify-content: space-between;
+  // justify-content: center;
+  // align-items: center;
+  // align-items: flex-start;
+  // background-color: red;
 }
 .message-style{
   font-size: 35px;
-  font-family: "Guardian-EgypTT",serif;
-  font-weight: 100;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-weight: 300;
   letter-spacing: -1.5px;
   -webkit-font-smoothing: antialiased;
 }
 .grid-main{
   display: flex;
-  justify-content: center;
-  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  // width: 75vw;
+  // background-color: green;
 }
 .grid-item{
-  justify-content: center;
-  padding: 5px;
+  // justify-content: center;
+  padding: 12px;
+  // width: 19%;
   min-width: 200px;
   max-width: 250px;
 

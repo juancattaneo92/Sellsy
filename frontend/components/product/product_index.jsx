@@ -58,10 +58,10 @@ class ProductIndex extends React.Component{
           <div className="message-box">{this.welcomeMessage()}</div>
         </div>
         <ul className="container-main">
-          <div className="container-items">
+          <div className="container-items">   
             {this.props.products.map((product) => {
-              return <ProductIndexItem product={product} key={product.id} />
-            })}
+                  return <ProductIndexItem product={product} key={product.id} />
+                })}
           </div>
         </ul>
       </div>
