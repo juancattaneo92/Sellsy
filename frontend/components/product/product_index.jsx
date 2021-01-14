@@ -4,7 +4,9 @@ import ProductIndexItem from './product_index_item';
 class ProductIndex extends React.Component{
   constructor(props){
     super(props);
-    this.state = { loading: true}
+    this.state = { loading: true};
+    this.productsByCategory = this.productsByCategory.bind(this);
+    this.allproducts = this.allproducts.bind(this)
     
   }
   componentDidMount(){
@@ -24,25 +26,56 @@ class ProductIndex extends React.Component{
     }
   }
 
-  render(){
-    if (this.state.loading){
-      return <div></div>
-    }
+  productsByCategory() {
+    let category = this.props.match.path.split("/")[1]
+    // debugger
+    let filteredProducts = this.props.products.filter(product =>
+      product.category === category
+      )
+      // console.log(filteredProducts)
+    return (
+      <div>
+        <div>
+          <div className="message-main">
+            <div className="message-box">{this.welcomeMessage()}</div>
+          </div>
+          <ul className="container-main">
+            <div className="container-items">
+              {filteredProducts.map((product) => {
+                return <ProductIndexItem product={product} key={product.id} />
+              })}
+            </div>
+          </ul>
+        </div>
+      </div>
+    )
+  }
+
+  allproducts() {
     return(
       <div>
         <div className="message-main">
-            <div className="message-box">{this.welcomeMessage()}</div>
+          <div className="message-box">{this.welcomeMessage()}</div>
         </div>
         <ul className="container-main">
           <div className="container-items">
-              {this.props.products.map( (product) =>{
-              return <ProductIndexItem product={product} key={product.id}/>
-              })}
+            {this.props.products.map((product) => {
+              return <ProductIndexItem product={product} key={product.id} />
+            })}
           </div>
-          </ul>
+        </ul>
       </div>
 
     )
+  }
+
+  render(){
+  let path = this.props.location.pathname
+
+    if (this.state.loading){
+      return <div></div>
+    }
+    return path === "/" ? this.allproducts() : this.productsByCategory()
   }
 }
 

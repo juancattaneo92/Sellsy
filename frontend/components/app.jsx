@@ -15,17 +15,15 @@ const App = () => (
     <Modal />
     <Header/>
     <Switch>  
+      <Route exact path="/" component={ProductIndexContainer}/> 
       <Route path="/jewelry-accessories" component={ProductIndexContainer} />
       <Route path="/clothing-shoes" component={ProductIndexContainer} />
       <Route path="/home-living" component={ProductIndexContainer} />
       <Route path="/wedding-party" component={ProductIndexContainer} />
-      <Route path="/toys-entertainment" component={ProductIndexContainer} />
       <Route path="/art-collectibles" component={ProductIndexContainer} />
       <Route path="/craft-supplies" component={ProductIndexContainer} />
-      <Route path="/vintage" component={ProductIndexContainer} />
       <Route path="/gifts" component={ProductIndexContainer} />
       <Route exact path="/search/:searchQuery" component={ProductIndexContainer}/>
-      <Route exact path="/" component={ProductIndexContainer}/> 
       <Route exact path="/products/:productId" component={ProductShowContainer} />   
       {/* <Route exact path='/categories/:categoryId' component={CategoryShowContainer} /> */}
       <Route exact path="/cart" component={CartItemsContainer} />
