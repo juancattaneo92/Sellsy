@@ -6,7 +6,7 @@ class CartItem extends React.Component{
     super(props);
     this.product = this.props.userCartItems[this.props.cartItemId];
     this.state = {
-              id: this.product.id,
+              id: this.props.cartItemId,
               user_id: this.product.user_id,
               product_id: this.product.product_id,
               quantity: this.product.quantity,
@@ -17,8 +17,10 @@ class CartItem extends React.Component{
 
   handleUpdateQuantity(e){
     e.preventDefault()
-    this.setState({ quantity: e.target.value });
-    this.props.updateCartItem(this.state)
+    this.setState({ quantity: e.target.value })
+    let updatedItem = Object.assign({}, this.state)
+    updatedItem.quantity = e.target.value
+    this.props.updateCartItem(updatedItem)
   }
 
 render() {
