@@ -188,7 +188,7 @@
   font-weight: 300;
   font-size: 13px;
   text-decoration: none;
-  color: grey;
+  color:black;
 }
 .header-categories:hover{
   cursor: pointer;
@@ -196,4 +196,11 @@
 .category:Link{
   text-decoration: none;
   color: grey;
+}
+
+.category::after{
+  text-decoration: none;
+}
+.category{
+  color: black;
 }
