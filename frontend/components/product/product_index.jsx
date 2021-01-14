@@ -70,12 +70,26 @@ class ProductIndex extends React.Component{
   }
 
   render(){
-  let path = this.props.location.pathname
+  let path = this.props.match.path
 
     if (this.state.loading){
       return <div></div>
     }
-    return path === "/" ? this.allproducts() : this.productsByCategory()
+    return (
+        // <div>
+        // {(() => {
+        //   if (path === "/" || "/search/:searchQuery"){
+        //     return this.allproducts();
+        //   } else if (path === "/search/:searchQuery"){
+        //     return this.allproducts();
+        //   }else{
+        //     return this.productsByCategory()
+        //   }
+        // })
+        // }
+        // </div>
+      path === "/" || path === "/search/:searchQuery" ? this.allproducts() : this.productsByCategory()
+    )
   }
 }
 
