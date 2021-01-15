@@ -5,9 +5,8 @@ import Modal from './modal/modal';
 import Header from './header/header';
 import ProductIndexContainer from './product/product_index_container';
 import ProductShowContainer from './product/product_show_container';
-// import CategoryShowContainer from './categories/category_show_container';
 import CartItemsContainer from './cart/cart_items_container';
-// import CategoryIndexContainer from "./category_index/category_index_container";
+import Footer from './footer/footer';
 
 
 const App = () => (
@@ -29,6 +28,7 @@ const App = () => (
       <Route exact path="/cart" component={CartItemsContainer} />
       <Redirect to="/"/>  
     </Switch>
+    <Footer/>
   </div>
 );
 
