@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
-      <div className="close-x" onClick={this.props.closeModal}>X</div>
+      <div className="close-x" onClick={this.props.closeModal}>x</div>
         
       <div className="session-container">
         <form onSubmit={this.handleSubmit} className="session-form-box">
@@ -89,6 +89,19 @@ class LoginForm extends React.Component {
             <button onClick={this.demoLogin} className='session-button'>Demo Guest</button>
           </div>
           <h2>{this.renderErrors()}</h2>
+          <div className="bottom-login">
+            <div className="divider"> OR </div>
+            <div className="social-media">
+                <div className="sm-buttons"> <i className="fab fa-google icon"></i>Continue with Google</div>
+                <div className="sm-buttons"> <i className="fab fa-facebook-f icon"></i>Continue with Facebook</div>
+                <div className="sm-buttons"> <i className="fab fa-apple icon"></i>Continue with Apple</div>
+            </div>
+            <div className="register-terms">
+                By clicking Register or Continue you agree to use this Clone of Etsy
+                Sellsy never send you communications; We'll never post without your permission.
+                If you continue with Google, Facebook, or Apple, this is are only links and might not work.
+            </div>
+          </div>
         </form>
       </div>
       </div >
