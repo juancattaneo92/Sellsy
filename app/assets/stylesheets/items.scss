@@ -233,55 +233,58 @@ padding: 5px 0px 5px 0px;
   cursor: pointer;
 }
 
-
-.item-added {
-  width: 154px;
-  height: 37px;
-  color: white;
-  font-size: 17px;
-  margin-top: -70px;
-  margin-left: 19px;
-  background-color: black;
-  border: 1px solid rgb(0, 0, 0);
-  display: none;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-
-.add-to-cart:focus .item-added {
-  display: flex;
-}
-
-.check-mark {
-  font-size: 20px;
-  margin-right: 8px;
-}
-
-// .msgbox-message-button {
-//   font-size: 18px;
-//   font-weight: bold;
-//   font-family: inherit;
-//   color: white;
-//   // background-color: $button-color;
-//   width: 250px;
-//   // border: solid 2px darken(button-color, 10%);
-//   padding: 10px 20px;
+// .popup {
+//   position: relative;
+//   display: inline-block;
 //   cursor: pointer;
-//   outline: none;
-//   // box-shadow: 0 5px darken($button-color, 10%);
-//   transition:
-//     background-color 100ms ease-out,
-//     box-shadow 100ms ease-out,
-//     transform 100ms ease-out;
-//   &:hover,
-//   &:focus,
-//   &:active {
-//     // background-color: lighten($button-color, 5%);
-//   }
-//   &:active {
-//     // background-color: darken($button-color, 5%);
-//     // box-shadow: 0 0 darken($button-color, 10%);
-//     transform: translateY(5px);
-//   }
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+// }
+
+// /* The actual popup */
+// .popup .popuptext {
+//   visibility: hidden;
+//   width: 160px;
+//   background-color: #555;
+//   color: #fff;
+//   text-align: center;
+//   border-radius: 6px;
+//   padding: 8px 0;
+//   position: absolute;
+//   z-index: 1;
+//   bottom: 125%;
+//   left: 50%;
+//   margin-left: -80px;
+// }
+
+// /* Popup arrow */
+// .popup .popuptext::after {
+//   content: "";
+//   position: absolute;
+//   top: 100%;
+//   left: 50%;
+//   margin-left: -5px;
+//   border-width: 5px;
+//   border-style: solid;
+//   border-color: #555 transparent transparent transparent;
+// }
+
+// /* Toggle this class - hide and show the popup */
+// .popup .show {
+//   visibility: visible;
+//   -webkit-animation: fadeIn 1s;
+//   animation: fadeIn 1s;
+// }
+
+// /* Add animation (fade in the popup) */
+// @-webkit-keyframes fadeIn {
+//   from {opacity: 0;} 
+//   to {opacity: 1;}
+// }
+
+// @keyframes fadeIn {
+//   from {opacity: 0;}
+//   to {opacity:1 ;}
 // }

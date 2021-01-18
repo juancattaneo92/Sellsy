@@ -14,8 +14,8 @@ class ProductShow extends React.Component{
     this.state = {
       quantity: 1,
       loading: true,
-      hideCloseButton: true,
-      // inProp: false
+      // show: true,
+
     };
     this.addToCart = this.addToCart.bind(this);
     this.createCart = this.createCart.bind(this);
@@ -65,28 +65,10 @@ class ProductShow extends React.Component{
   }
 
 //   handlePopup() {
-//     // var popup = document.getElementById("myPopup");
-//     // popup.classList.toggle("show");
-//   var popup = ReactDOM.findDOMNode(this.refs.btn);
-//   popup.classList.toggle('show');
-
-//     document.getElementById("myDIV").classList.add("mystyle"); 
+//     let popup = document.querySelector("myPopup").classList.toogle("show");
 // }
 
-  //  { this.props.currentUser === null ? null : <button className="review-but" onClick={() => this.props.openModal("create-review")}>Create a Review</button> }
-  // handlePopup() {
-  //   let msgbutton = document.querySelector("buttom-tobuy");
-  //   msgbutton.addEventListener("click", function () {
-  // });
-  // let msgboxNoClose = new MessageBox("#msgbox-area", {
-  //   closeTime: 5000,
-  //   hideCloseButton: false
-  // });
-  // return msgboxNoClose.show("Added to Cart")
-
-  // }
   
-
   render(){
     if (this.state.loading || !this.props.product || !this.props.reviews){
       return <div></div>
@@ -127,26 +109,19 @@ class ProductShow extends React.Component{
             <div className="rating-avg"><AverageRatingContainer productId={this.props.product.id} reviews={this.props.reviews} /></div>
             <div className="price-show">${this.props.product.price}.00</div>
             <div className="description-show">{this.props.product.description}</div>
-            {/* <button onClick={this.addToCart} className="buttom-tobuy">Add to cart 
-            <div className='item-added'>
-                <span className='check-mark'></span> Added to Cart
-           </div>  */}
-            <button onClick={this.addToCart} className="buttom-tobuy" type="button">Add to cart
-              {/* {this.handlePopup} */}
-              </button>
-            {/* </button> */}
+            <button onClick={this.addToCart} className="buttom-tobuy">Add to cart 
+
+            {/* <button onClick={this.addToCart} className="buttom-tobuy" type="button">Add to cart
+              <div className="popup" onClick={this.handlePopup}>
+                    <span className="popuptext" id="myPopup">Added To Cart !</span>
+              </div>
+              </button> */}
+            </button>
         </div>
 
           <div className="child-comments">
             {reviewsIndexComponent}
-            {/* <ReviewIndexContainer
-              reviews={this.props.reviews}
-              product={this.props.product}
-              productId={this.props.product.id}
-              requestReviews={this.props.requestReviews}
-              openModal={this.props.openModal}
-              userId={this.props.user.id}
-            />   */}
+
           </div>      
       </div>
     </div>

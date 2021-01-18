@@ -16,11 +16,11 @@ const PopUpThanks = ({closeModal}) => {
             <div className="bio-name">
               Sellsy is a project by Juan Carlos Cattaneo, a web developer 
               graduated from App Academy. If you would like to see more projects, 
-              please visit this {" "}<a className="webname"href="" target="_blank">website</a>.
+              please visit his {" "}<a className="webname"href="" target="_blank">website</a>.
                 </div>
               <div className="bio-message">
               The products on this site are for demo purposes only if you are interested 
-              \in purchasing you can go to the original <a href="https://www.etsy.com/" 
+              in purchasing you can go to the original <a href="https://www.etsy.com/" 
               target="_blank">website</a>.
               </div>
 
