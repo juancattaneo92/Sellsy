@@ -14,12 +14,13 @@ class ProductShow extends React.Component{
     this.state = {
       quantity: 1,
       loading: true,
-      // show: true,
+      popMesssage: false,
 
     };
     this.addToCart = this.addToCart.bind(this);
     this.createCart = this.createCart.bind(this);
-    // this.handlePopup = this.handlePopup.bind(this);
+    this.handlePop = this.handlePop.bind(this);
+    // this.renderMessage = this.renderMessage.bind(this);
 
 
   }
@@ -53,7 +54,7 @@ class ProductShow extends React.Component{
   }
 
 
-  addToCart(e) {
+addToCart(e) {
     e.preventDefault();
     // debugger
     if (!this.props.user) {
@@ -64,12 +65,16 @@ class ProductShow extends React.Component{
    }
   }
 
-//   handlePopup() {
-//     let popup = document.querySelector("myPopup").classList.toogle("show");
-// }
+handlePop(e) {
+  this.addToCart(e);
+  this.setState({popMesssage: true})
+  setTimeout(()=> { this.setState({popMesssage: false }) }, 2000)
+}
 
   
   render(){
+    const displayFeed = this.state.popMesssage ? <div className="popup"> <div className="popuptext">Added to Cart</div></div>  : null;
+
     if (this.state.loading || !this.props.product || !this.props.reviews){
       return <div></div>
     }
@@ -109,14 +114,10 @@ class ProductShow extends React.Component{
             <div className="rating-avg"><AverageRatingContainer productId={this.props.product.id} reviews={this.props.reviews} /></div>
             <div className="price-show">${this.props.product.price}.00</div>
             <div className="description-show">{this.props.product.description}</div>
-            <button onClick={this.addToCart} className="buttom-tobuy">Add to cart 
-
-            {/* <button onClick={this.addToCart} className="buttom-tobuy" type="button">Add to cart
-              <div className="popup" onClick={this.handlePopup}>
-                    <span className="popuptext" id="myPopup">Added To Cart !</span>
-              </div>
-              </button> */}
+            <button onClick={this.handlePop} className="buttom-tobuy">Add to cart 
             </button>
+            {displayFeed}
+
         </div>
 
           <div className="child-comments">
