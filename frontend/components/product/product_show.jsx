@@ -20,7 +20,6 @@ class ProductShow extends React.Component{
     this.addToCart = this.addToCart.bind(this);
     this.createCart = this.createCart.bind(this);
     this.handlePop = this.handlePop.bind(this);
-    // this.renderMessage = this.renderMessage.bind(this);
 
 
   }
@@ -114,8 +113,7 @@ handlePop(e) {
             <div className="rating-avg"><AverageRatingContainer productId={this.props.product.id} reviews={this.props.reviews} /></div>
             <div className="price-show">${this.props.product.price}.00</div>
             <div className="description-show">{this.props.product.description}</div>
-            <button onClick={this.handlePop} className="buttom-tobuy">Add to cart 
-            </button>
+            <button onClick={this.handlePop} className="buttom-tobuy">Add to cart</button>
             {displayFeed}
 
         </div>
