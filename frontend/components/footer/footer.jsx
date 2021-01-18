@@ -1,15 +1,11 @@
 import React from 'react';
-
 class Footer extends React.Component {
   constructor(props) {
     super(props);
     // this.subscription = this.subscription.bind(this);
   }
  
-  handleClick(){
-    e.preventDefault(e);
 
-  }
   // subscription(){
   //   let popup = document.getElementById("popUp1");
   //   popup.classList.toggle("show");
@@ -29,10 +25,10 @@ class Footer extends React.Component {
 
           <div className='mailing-list-input'>
             <input type="text" placeholder='Enter your email' />
-            {/* <button className="popup" onClick={this.subscription()}  >Subscribe */}
+            <button className="popup" >Subscribe
 
                 {/* <span className="popUpText1" id="popUp1">Thanks for using Sellsy!</span> */}
-            {/* </button> */}
+            </button>
           </div>
         </div>
 
@@ -73,11 +69,11 @@ class Footer extends React.Component {
                 {/* <a href="" target="_blank"><div className='download-app-btn'><img src='' /> Download the Sellsy App</div></a> */}
 
                 <div className='footer-logo-container'>
-                  {/* <a href="" target="_blank">{githubIcon}</a>
-                  <a href="" target="_blank">{linkedinIcon}</a>
+                  {/* {/* <a href="" target="_blank">{githubIcon}</a> */}
+                  {/* <a href="" target="_blank">{linkedinIcon}</a>
                   <a href="" target="_blank">{briefcaseIcon}</a>
                   <a href="">{convoIcon}</a> */}
-                </div>
+                </div> 
               </div>
             </div>
 
@@ -87,12 +83,12 @@ class Footer extends React.Component {
         <div className='footer-end-container'>
           <div className="block-background"></div>
           <div className='terms-policies'>
-              <p>© 2021 Sellsy, Inc</p> 
-              <p><u>Terms of Use</u></p>
-              <p><u>Privacy</u></p>
-              <p><u>Interest-based ads</u></p>
-         
+                <p>© 2021 Sellsy, Inc</p>
+                <p><u>Terms of Use</u></p>
+                <p><u>Privacy</u></p>
+                <p><u>Interest-based ads</u></p>
           </div>
+
         </div>
         </div>
 

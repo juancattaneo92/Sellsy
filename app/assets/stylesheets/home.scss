@@ -52,17 +52,24 @@
 
 }
 .image-holder > img{
-    width: 250px;
-    height: 220px;
-    /* border: 1px;
-    border-color: black;
-    border-style: solid; */
+  width: 250px;
+  height: 220px;
+  transition: box-shadow .3s;
+  border-radius:10px;
+  background: #fff;
+  float: left;
+  margin-bottom: 10px;
+}
+
+  
+.image-holder > img:hover {
+  box-shadow: 0 0 20px rgba(33,33,33,.2); 
 }
 .name-holder{
-    padding: 8px 0px 0px 0px;
-    color: black;
-    font-size: 16px;
-    font-weight: 300;
+  padding: 8px 0px 0px 0px;
+  color: black;
+  font-size: 16px;
+  font-weight: 300;
     
 }
 .price-holder{

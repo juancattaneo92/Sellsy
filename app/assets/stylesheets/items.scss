@@ -74,7 +74,18 @@
   font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   font-weight: 500;
   margin-left: 15px;
+  transition:
+  background-color 100ms ease-out,
+  box-shadow 100ms ease-out,
+  transform 100ms ease-out;
 }
+.button-.buttom-tobuy {
+//     // background-color: darken($button-color, 5%);
+//     // box-shadow: 0 0 darken($button-color, 10%);
+    transform: translateY(5px);
+//   }
+}
+
 .buttom-tobuy:hover{
   cursor: pointer;
   color: white;
@@ -221,3 +232,56 @@ padding: 5px 0px 5px 0px;
 .picture-image:hover{
   cursor: pointer;
 }
+
+
+.item-added {
+  width: 154px;
+  height: 37px;
+  color: white;
+  font-size: 17px;
+  margin-top: -70px;
+  margin-left: 19px;
+  background-color: black;
+  border: 1px solid rgb(0, 0, 0);
+  display: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-to-cart:focus .item-added {
+  display: flex;
+}
+
+.check-mark {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+// .msgbox-message-button {
+//   font-size: 18px;
+//   font-weight: bold;
+//   font-family: inherit;
+//   color: white;
+//   // background-color: $button-color;
+//   width: 250px;
+//   // border: solid 2px darken(button-color, 10%);
+//   padding: 10px 20px;
+//   cursor: pointer;
+//   outline: none;
+//   // box-shadow: 0 5px darken($button-color, 10%);
+//   transition:
+//     background-color 100ms ease-out,
+//     box-shadow 100ms ease-out,
+//     transform 100ms ease-out;
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     // background-color: lighten($button-color, 5%);
+//   }
+//   &:active {
+//     // background-color: darken($button-color, 5%);
+//     // box-shadow: 0 0 darken($button-color, 10%);
+//     transform: translateY(5px);
+//   }
+// }

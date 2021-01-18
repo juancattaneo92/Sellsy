@@ -118,9 +118,12 @@
     top: 0;
 }
 
-.checkout-pay-img{
+.checkout-pay-img > img{
   background-image: image-url('payments.png');
+  width: 13vw;
+  height: 142px;
 }
+
 .checkout-total{
   margin-bottom: 20px;
   display: flex;
@@ -153,40 +156,41 @@
   color: #757575;
 }
 
-.checkout-each-ratio{
-  width: 2em;
-  height: 2em;
-  margin-bottom: 6px;
-  margin-left: auto;
-  color: black;
-}
-.checkout-each-ratio input[type='radio']:after {
-        width: 12px;
-        height: 12px;
-        border-radius: 20px;
-        top: 0px;
-        left: 0px;
-        position: relative;
-        background-color: #d1d3d1;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 8px solid white;
-    }
+  .checkout-each-ratio#cart{
+    width: 2em;
+    height: 2em;
+    margin-bottom: 6px;
+    margin-left: auto;
+    color: black;
+  }
+  .checkout-each-ratio#cart input[type='radio']:after {
+          width: 12px;
+          height: 12px;
+          border-radius: 20px;
+          top: 0px;
+          left: 0px;
+          position: relative;
+          background-color: #d1d3d1;
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 8px solid white;
+      }
+  
+  input[type='radio']#cart:checked:after {
+      width: 12px;
+      height: 12px;
+      border-radius: 20px;
+      top: 0px;
+      left: 0px;  
+      position: relative;
+      background-color: white;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      border: 8px solid black;
+      }
 
-input[type='radio']:checked:after {
-    width: 12px;
-    height: 12px;
-    border-radius: 20px;
-    top: 0px;
-    left: 0px;  
-    position: relative;
-    background-color: white;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 8px solid black;
-    }
 
 .cart-product{
   margin-top: 15px;
@@ -219,12 +223,14 @@ input[type='radio']:checked:after {
   border-radius: 5px;
 }
 
+.cart-image:hover{
+  box-shadow: 0 0 30px rgba(33,33,33,.2); 
+}
+
 .cart-title-delete{
     float: left;
     width: 20vw;
     justify-content: space-between;
-    /* outline: none; */
-    /* background: yellow; */
     margin-left: 2%;
     margin-top: 0.5%;
   
@@ -264,10 +270,11 @@ input[type='radio']:checked:after {
 .cart-price{
     font-size: 17px;
     // float: left;
-    // width: 7vw;
+    width: 116px;
     text-align: right;
-    margin-top: 1.5%;
+    // margin-top: 1.5%;
     font-weight: 400;
+    margin: 1.5%;
     /* background: blue; */
 }
 .quantity-cart{

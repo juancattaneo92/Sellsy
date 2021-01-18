@@ -19,8 +19,8 @@ const Header = ({ user, logout, openModal}) => {
   const loggingOut = (user, logout) => (
     <div className="parent-welcome">
       <div className="header-button"> 
-        {/* <button className="header-button1" onClick={logout}>Sign out</button> */}
         <button className="header-button1" onClick={logout}>Sign out</button>
+
 
       </div>
     </div>

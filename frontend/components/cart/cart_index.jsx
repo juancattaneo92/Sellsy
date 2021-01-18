@@ -91,9 +91,9 @@ class CartIndex extends React.Component {
             <div className="checkout-title">How you'll pay</div>
               <div className="checkout-payment">
                 <div className="checkout-pay-radio">
-                  <input type="radio" className="checkout-each-ratio" name="payment"/>
-                  <input type="radio" className="checkout-each-ratio" name="payment"/>
-                  <input type="radio" className="checkout-each-ratio" name="payment"/>
+                  <input type="radio" id="cart" className="checkout-each-ratio" name="payment"/>
+                  <input type="radio" id="cart" className="checkout-each-ratio" name="payment"/>
+                  <input type="radio" id="cart" className="checkout-each-ratio" name="payment"/>
                 </div>
                 <div className="checkout-pay-img">
                   <img src={window.visa} alt=""/>
