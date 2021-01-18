@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
@@ -10,6 +10,7 @@ import { fetchAllCartItems } from '../../actions/shopping_cart_actions';
 
 const Header = ({ user, logout, openModal}) => {
 
+
   const logginIn = () => (
     <div className="header-button">
       <button className="header-button1" onClick={() => openModal('login')}>Sign in</button>
@@ -18,7 +19,9 @@ const Header = ({ user, logout, openModal}) => {
   const loggingOut = (user, logout) => (
     <div className="parent-welcome">
       <div className="header-button"> 
+        {/* <button className="header-button1" onClick={logout}>Sign out</button> */}
         <button className="header-button1" onClick={logout}>Sign out</button>
+
       </div>
     </div>
   );

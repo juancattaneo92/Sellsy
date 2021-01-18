@@ -5,7 +5,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewFormContainer from '../reviews/create_review_form_container';
 import EditReviewFormContainer from "../reviews/edit_review_container";
-import ThanksPopUp from '../thanks_popup';
+import PopUpThanks from '../popup_thanks';
 
 function Modal({ modal, closeModal, clearErrors}) {
 
@@ -34,8 +34,10 @@ function Modal({ modal, closeModal, clearErrors}) {
       case "create-review":
         component = <ReviewFormContainer />;
         break;
-      case "popup-thanks":
-        component = <ThanksPopUp />
+      case 'popup-thanks':
+        // debugger
+        component = <PopUpThanks />;
+        break;
       default:
         return null;
     }

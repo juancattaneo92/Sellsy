@@ -4,6 +4,9 @@ import { fetchCartItem, fetchAllCartItems, deleteCartItem, createCartItem, updat
 import { openModal } from '../../actions/modal_actions';
 
 const mSTP = state => {
+  if (!state.session.currentUser){
+    return null;
+  }
   return ({
     userCartItems: state.entities.cartItems,
     curentUserId: state.session.currentUser.id,
@@ -18,7 +21,9 @@ const mDTP = dispatch => {
     createCartItem: cartItem => dispatch(createCartItem(cartItem)),
     deleteCartItem: cartItemId => dispatch(deleteCartItem(cartItemId)),
     updateCartItem: cartItem => dispatch(updateCartItem(cartItem)),
-    openModal: (payload) => dispatch(openModal(payload)),
+    openModal: (modal) => {
+      dispatch(openModal(modal))
+    },
   })
 };
 

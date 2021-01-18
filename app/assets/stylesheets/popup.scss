@@ -1,7 +1,7 @@
 
-.close-x{
+.close-x > #popup{
     font-size: 28px;
-    color: white;
+    color: black;
     width: 55px;
     height: 53px;
     border-radius: 30px;
@@ -21,5 +21,31 @@
 }
 
 .popup-div{
-  background-color: red;
+    background-color: white;
+    height: auto;
+    width: 35vw;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.bio-name {
+  color: #31dd4e;
+  background: linear-gradient(45deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  animation: animatedgradient 5s infinite linear;
+  background-size: 300% 300%;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.bio-message{
+  font-size: 10px;
+  margin-top: 5px;
+}
+.webname{
+  color: black;
 }

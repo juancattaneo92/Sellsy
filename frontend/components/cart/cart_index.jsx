@@ -9,12 +9,12 @@ class CartIndex extends React.Component {
 
     this.state = {
       subtotal: 0,
-      showPopUp: false
     };
 
     this.emptyCart = this.emptyCart.bind(this);
     this.filledCart = this.filledCart.bind(this);
-    this.updatedtotal = this.updatedtotal.bind(this);;
+    this.updatedtotal = this.updatedtotal.bind(this);
+    // this.handleModal = this.handleModal.bind(this);
   }
 
   updatedtotal() {
@@ -42,6 +42,10 @@ class CartIndex extends React.Component {
       this.props.fetchAllCartItems();
     }
   }
+
+  // handleModal() {
+  //   this.props.openModal('popup-thanks') 
+  // }
 
 
   filledCart() {
@@ -87,9 +91,9 @@ class CartIndex extends React.Component {
             <div className="checkout-title">How you'll pay</div>
               <div className="checkout-payment">
                 <div className="checkout-pay-radio">
-                  <input type="radio" className="checkout-each-ratio" />
-                  <input type="radio" className="checkout-each-ratio" />
-                  <input type="radio" className="checkout-each-ratio" />
+                  <input type="radio" className="checkout-each-ratio" name="payment"/>
+                  <input type="radio" className="checkout-each-ratio" name="payment"/>
+                  <input type="radio" className="checkout-each-ratio" name="payment"/>
                 </div>
                 <div className="checkout-pay-img">
                   <img src={window.visa} alt=""/>
@@ -111,8 +115,7 @@ class CartIndex extends React.Component {
              </div>
             </div>
               <div className='checkout-but'>
-              
-                <button className='checkout' onClick={() => this.props.openModal("popup-thanks")}>Proceed to checkout</button>
+                <button className='checkout' onClick={() => this.props.openModal('popup-thanks')}>Proceed to checkout</button>
               </div>
               <div className="checkout-additional">Additional duties and taxes may apply</div>
                           {/* <div className=''>
@@ -143,8 +146,20 @@ class CartIndex extends React.Component {
   }
 
   render() {
-
+    // if (!this.props.currentUserId){
+    //   return (
+    //     <div></div>
+    //   )
+    // }
     return Object.values(this.props.userCartItems).length === 0 ? this.emptyCart() : this.filledCart()
+    // return ((Object.values(this.props.userCartItems).length === 0) || (this.props.currentUserId === null)) ? this.emptyCart() : this.filledCart()
+
+    // if (!this.props.userCartItems || this.props.currentUserId === null){
+    //   return this.emptyCart();
+    // }else{
+    //   return this.filledCart();
+    // }
+
 
   }
 }
