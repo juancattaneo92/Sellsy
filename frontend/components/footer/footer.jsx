@@ -3,9 +3,17 @@ import React from 'react';
 class Footer extends React.Component {
   constructor(props) {
     super(props);
+    // this.subscription = this.subscription.bind(this);
+  }
+ 
+  handleClick(){
+    e.preventDefault(e);
 
   }
-
+  // subscription(){
+  //   let popup = document.getElementById("popUp1");
+  //   popup.classList.toggle("show");
+  // }
 
   render() {
     return (
@@ -21,7 +29,10 @@ class Footer extends React.Component {
 
           <div className='mailing-list-input'>
             <input type="text" placeholder='Enter your email' />
-            <button>Subscribe</button>
+            {/* <button className="popup" onClick={this.subscription()}  >Subscribe */}
+
+                {/* <span className="popUpText1" id="popUp1">Thanks for using Sellsy!</span> */}
+            {/* </button> */}
           </div>
         </div>
 

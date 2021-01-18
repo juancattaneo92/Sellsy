@@ -1,0 +1,25 @@
+
+.close-x{
+    font-size: 28px;
+    color: white;
+    width: 55px;
+    height: 53px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: auto;
+    margin-right: 0;
+    /* font-weight: 300; */
+    align-items: center;
+}
+.close-x:hover,
+.close-x:focus {
+    cursor: pointer;
+    background-color: #c3bdbd;
+    border-radius: 30px;
+}
+
+.popup-div{
+  background-color: red;
+}

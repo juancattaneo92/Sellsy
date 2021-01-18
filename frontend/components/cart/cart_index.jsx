@@ -8,12 +8,13 @@ class CartIndex extends React.Component {
     super(props);
 
     this.state = {
-      subtotal: 0
+      subtotal: 0,
+      showPopUp: false
     };
 
     this.emptyCart = this.emptyCart.bind(this);
     this.filledCart = this.filledCart.bind(this);
-    this.updatedtotal = this.updatedtotal.bind(this);
+    this.updatedtotal = this.updatedtotal.bind(this);;
   }
 
   updatedtotal() {
@@ -41,6 +42,7 @@ class CartIndex extends React.Component {
       this.props.fetchAllCartItems();
     }
   }
+
 
   filledCart() {
     // debugger
@@ -109,7 +111,8 @@ class CartIndex extends React.Component {
              </div>
             </div>
               <div className='checkout-but'>
-                <button className='checkout'>Proceed to checkout</button>
+              
+                <button className='checkout' onClick={() => this.props.openModal("popup-thanks")}>Proceed to checkout</button>
               </div>
               <div className="checkout-additional">Additional duties and taxes may apply</div>
                           {/* <div className=''>

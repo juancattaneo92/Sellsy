@@ -5,7 +5,7 @@ import Modal from './modal/modal';
 import Header from './header/header';
 import ProductIndexContainer from './product/product_index_container';
 import ProductShowContainer from './product/product_show_container';
-import CartItemsContainer from './cart/cart_items_container';
+import CartIndexContainer from './cart/cart_index_container';
 import Footer from './footer/footer';
 
 
@@ -25,7 +25,7 @@ const App = () => (
       <Route exact path="/search/:searchQuery" component={ProductIndexContainer}/>
       <Route exact path="/products/:productId" component={ProductShowContainer} />   
       {/* <Route exact path='/categories/:categoryId' component={CategoryShowContainer} /> */}
-      <Route exact path="/cart" component={CartItemsContainer} />
+      <Route exact path="/cart" component={CartIndexContainer} />
       <Redirect to="/"/>  
     </Switch>
     <Footer/>
