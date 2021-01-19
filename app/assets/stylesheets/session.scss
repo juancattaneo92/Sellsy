@@ -113,7 +113,11 @@ button{
     margin-top: 10px;
 }
 
-.session-form{
+.sf-login{
+    margin-top: -47px;
+}
+
+.sf-register{
     margin-top: -15px;
 }
 .login-message{
@@ -126,10 +130,13 @@ button{
 
 
 .sm-buttons{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
     background-color: white;
     cursor: pointer;
     border-radius: 26px;
-    /* padding: 0.5em 0.5em; */
+    padding: 0.3em 0.3em;
     width: 300px;
     font-size: 17px;
     text-align-last: center;
@@ -146,11 +153,14 @@ button{
 .sm-buttons > i{
     height: 15px;
 }
+a:link{
+    text-decoration: none !important;
+}
 
 .register-terms{
     font-size: xx-small;
     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
-    margin: 6px 30px 13px 30px;
+    margin: 5px 30px 13px 35px;
 }
 
 .bottom-login{
@@ -171,5 +181,23 @@ button{
     padding: 8px;
     color: grey;
     background-color: whitesmoke;
+}
 
+.session-errors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
+    font-size: 10px;
+    color: red;
+}
+
+.bottom-login-reg{
+    margin-top: 7px;
+    border-top: 1px solid rgba(34, 34, 34, 0.15);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

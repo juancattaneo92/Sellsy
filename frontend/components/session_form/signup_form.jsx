@@ -22,6 +22,7 @@ class SignupForm extends React.Component {
   }
 
   renderErrors() {
+
     return (
       <ul>
         {this.props.errors.map((error) => (
@@ -34,7 +35,7 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div>
-      <div className="close-x" onClick={this.props.closeModal}>X</div>
+      <div className="close-x" onClick={this.props.closeModal}>x</div>
 
       <div className="session-container">
         <form onSubmit={this.handleSubmit} className="session-form-box">
@@ -46,7 +47,7 @@ class SignupForm extends React.Component {
               <h1 className="top-message2">Registration is easy.</h1>
           </div>
 
-            <div className="session-form">
+            <div className="sf-register">
                 <br />
               <label className="input-label">Email address
                 <br />
@@ -65,7 +66,20 @@ class SignupForm extends React.Component {
                 <br />
             <button type="submit" className="session-button" value={this.props.formType}>{this.props.formType}</button>
           </div>
-        <h2>{this.renderErrors()}</h2>
+            <div className="session-errors">{this.renderErrors()}</div>
+            <div className="bottom-login-reg">
+              <div className="divider"> OR </div>
+              <div className="social-media">
+                <a className="sm-buttons" href="https://www.google.com/account/about/" target="_blank"><i className="fab fa-google icon"></i>Continue with Google</a>
+                <a className="sm-buttons" href="http://facebook.com" target="_blank"><i className="fab fa-facebook-f icon"></i>Continue with Facebook</a>
+                <a className="sm-buttons" href="https://secure2.store.apple.com/shop/signIn?c=aHR0cHM6Ly93d3cuYXBwbGUuY29tL3wxYW9zZTQyMmM4Y2NkMTc4NWJhN2U2ZDI2NWFmYWU3NWI4YTJhZGIyYzAwZQ&r=SCDHYHP7CY4H9XK2H&s=aHR0cHM6Ly93d3cuYXBwbGUuY29tL3wxYW9zZTQyMmM4Y2NkMTc4NWJhN2U2ZDI2NWFmYWU3NWI4YTJhZGIyYzAwZQ" target="_blank"><i className="fab fa-apple icon"></i>Continue with Apple</a>
+              </div>
+              <div className="register-terms">
+                By clicking Register or Continue you agree to use this Clone of Etsy
+                Sellsy never send you communications; We'll never post without your permission.
+                If you continue with Google, Facebook, or Apple, this is are only links and might not work.
+            </div>
+            </div>
         </form>
       </div>
       </div>
