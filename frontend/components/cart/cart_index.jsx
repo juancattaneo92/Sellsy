@@ -43,14 +43,10 @@ class CartIndex extends React.Component {
     }
   }
 
-  // handleModal() {
-  //   this.props.openModal('popup-thanks') 
-  // }
 
 
   filledCart() {
-    // debugger
-    // let numItems = Object.values(this.props.userCartItems).length;
+
  
     let cartItemsArr = Object.keys(this.props.userCartItems);
     let numberItems = [];
@@ -118,10 +114,8 @@ class CartIndex extends React.Component {
                 <button className='checkout' onClick={() => this.props.openModal('popup-thanks')}>Proceed to checkout</button>
               </div>
               <div className="checkout-additional">Additional duties and taxes may apply</div>
-                          {/* <div className=''>
-                Thank you! Your order has been received.
-                          </div> */}
-            {/* <div className='checkout'>Thank you! Your order has been received.</div> */}
+                         
+         
           </div>
         </div>
 
@@ -146,21 +140,7 @@ class CartIndex extends React.Component {
   }
 
   render() {
-    // if (!this.props.currentUserId){
-    //   return (
-    //     <div></div>
-    //   )
-    // }
     return Object.values(this.props.userCartItems).length === 0 ? this.emptyCart() : this.filledCart()
-    // return ((Object.values(this.props.userCartItems).length === 0) || (this.props.currentUserId === null)) ? this.emptyCart() : this.filledCart()
-
-    // if (!this.props.userCartItems || this.props.currentUserId === null){
-    //   return this.emptyCart();
-    // }else{
-    //   return this.filledCart();
-    // }
-
-
   }
 }
 

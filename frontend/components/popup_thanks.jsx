@@ -14,9 +14,9 @@ const PopUpThanks = ({closeModal}) => {
           <div >
             <h3>Thank you for visiting Sellsy!</h3>
             <div className="bio-name">
-              Sellsy is a project by Juan Carlos Cattaneo, a web developer 
+              Sellsy is a project by {" "} <strong><a className="webname" href="https://juancattaneo92.github.io/portafolio/" target="_blank">Juan Carlos Cattaneo</a></strong>, a web developer 
               graduated from App Academy. If you would like to see more projects, 
-              please visit his {" "}<a className="webname"href="" target="_blank">website</a>.
+              please visit my{" "} <strong><a className="webname" href="https://juancattaneo92.github.io/portafolio/" target="_blank">portafolio</a>.</strong>
                 </div>
               <div className="bio-message">
               The products on this site are for demo purposes only if you are interested 
