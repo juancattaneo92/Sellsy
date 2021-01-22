@@ -1,5 +1,4 @@
 import React from 'react'; 
-import { Link } from 'react-router-dom';
 
 class Footer extends React.Component {
   constructor(props) {
@@ -20,7 +19,9 @@ class Footer extends React.Component {
     const displayMessage = this.state.popMesssage ? <div className="popup2"><div className="popuptext2">Thank you for subscribing!</div></div> : null;
     return (
       <div className='footer-container'>
+        {/* <div className="footer"></div> */}
         <img src={window.footer} alt="" />
+        {/* <img src="assets/images/footer.png" alt=""/> */}
         <div className=''>
 
         <div className='mailing-list-container'>
