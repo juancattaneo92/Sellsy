@@ -6,8 +6,10 @@ class SignupForm extends React.Component {
     this.state = {
       email: '',
       password: '',
+      popMessage: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.subs = this.subs.bind(this);
   }
 
   update(field) {
@@ -32,7 +34,14 @@ class SignupForm extends React.Component {
     );
   }
 
+  subs() {
+    this.setState({ popMesssage: true })
+    setTimeout(() => { this.setState({ popMesssage: false }) }, 3000)
+  }
+
   render() {
+    const displayMessage = this.state.popMesssage ? <div className="popup3"><div className="popuptext3">Only for design purpose, does not Register</div></div> : null;
+
     return (
       <div>
       <div className="close-x" onClick={this.props.closeModal}>x</div>
@@ -70,9 +79,10 @@ class SignupForm extends React.Component {
             <div className="bottom-login-reg">
               <div className="divider"> OR </div>
               <div className="social-media">
-                <a className="sm-buttons" href="https://www.google.com/account/about/" target="_blank"><i className="fab fa-google icon"></i>Continue with Google</a>
-                <a className="sm-buttons" href="http://facebook.com" target="_blank"><i className="fab fa-facebook-f icon"></i>Continue with Facebook</a>
-                <a className="sm-buttons" href="https://secure2.store.apple.com/shop/signIn?c=aHR0cHM6Ly93d3cuYXBwbGUuY29tL3wxYW9zZTQyMmM4Y2NkMTc4NWJhN2U2ZDI2NWFmYWU3NWI4YTJhZGIyYzAwZQ&r=SCDHYHP7CY4H9XK2H&s=aHR0cHM6Ly93d3cuYXBwbGUuY29tL3wxYW9zZTQyMmM4Y2NkMTc4NWJhN2U2ZDI2NWFmYWU3NWI4YTJhZGIyYzAwZQ" target="_blank"><i className="fab fa-apple icon"></i>Continue with Apple</a>
+                {displayMessage}
+                <a onClick={this.subs} className="sm-buttons"><i className="fab fa-google icon"></i>Continue with Google</a>
+                <a onClick={this.subs} className="sm-buttons"><i className="fab fa-facebook-f icon"></i>Continue with Facebook</a>
+                <a onClick={this.subs} className="sm-buttons"><i className="fab fa-apple icon"></i>Continue with Apple</a>
               </div>
               <div className="register-terms">
                 By clicking Register or Continue you agree to use this Clone of Etsy
