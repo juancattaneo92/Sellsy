@@ -84,7 +84,7 @@ class Footer extends React.Component {
                     {/* github */}
                     <a href="https://github.com/juancattaneo92/Sellsy" target="_blank"><i className="fab fa-github fa-lg github"></i></a>  
                     {/* personal page  */}
-                    <a href="" target="_blank"><i className="far fa-address-card fa-lg personalPage"></i></a> 
+                    <a href="https://juancattaneo92.github.io/portafolio/" target="_blank"><i className="far fa-address-card fa-lg personalPage"></i></a> 
                     {/* Linkedin */}
                     <a href="https://www.linkedin.com/in/juan-carlos-cattaneo-450a3b97/" target="_blank"><i className="fab fa-linkedin fa-lg linkedin"></i></a> 
 
